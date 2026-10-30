@@ -1,0 +1,11 @@
+{
+  "models": [
+    {"name": "DeepSeek-V4", "dialect": "v4", "marker_key": "dsml_v4"},
+    {"name": "DeepSeek-V4.1", "dialect": "v41", "marker_key": "dsml_v41"},
+    {"name": "Kimi-K2", "dialect": "kimi", "marker_key": "kimi_k2"},
+    {"name": "Kimi-K3", "dialect": "kimi_k3", "marker_key": "kimi_k3"},
+    {"name": "Qwen-Coder", "dialect": "qwen_coder", "marker_key": "qwen_coder"},
+    {"name": "Qwen", "dialect": "qwen", "marker_key": "qwen"}
+  ],
+  "policy": "Keep observations for these six target dialects only. Mixed inputs containing out-of-scope dialects are archived without rewriting their outputs. Upstream source dependencies remain unchanged."
+}

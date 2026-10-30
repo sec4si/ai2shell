@@ -1,0 +1,30 @@
+{
+  "repository": "NVIDIA/TensorRT-LLM",
+  "commit": "e805aac356a2519bff1e2c320575400d67cd949f",
+  "partial_snapshot": true,
+  "files": {
+    "AGENTS.md": "5d957551415e2622013593558ec2d3790afaa026a2b81f122f5ac847934a2726",
+    "LICENSE": "a56e691155bb532ea212f701d3ecacb2db549fa64757f9bad3e06bc9177f46ea",
+    "tensorrt_llm/serve/openai_protocol.py": "ab9ba4f3039f7e2724e53db9a073cb9c487571198898835aa55cf42c4e5cd400",
+    "tensorrt_llm/serve/tool_parser/__init__.py": "1e8d5a784a72e0eb162981c357885753d614b732c80edb7f094bda1a4a4a7c8b",
+    "tensorrt_llm/serve/tool_parser/base_tool_parser.py": "dfd12d276a7ab89fac9398b1c7bd30bfb6547d976b414bb8893fbe78f2eb3ae1",
+    "tensorrt_llm/serve/tool_parser/core_types.py": "31e59fe9030457f0082c5710aa09e20f41b799ee42f8a771828562f987910038",
+    "tensorrt_llm/serve/tool_parser/deepseekv31_parser.py": "142194cb606bdc0c0e9fb2a23ca646c6d2e5fda5fe0ca3eb2ceef56a6f957e0c",
+    "tensorrt_llm/serve/tool_parser/deepseekv32_parser.py": "0b902dafb3425c70e864b14a1ea66ea3c72ce6bdf3201b9b40cbc83335359b8d",
+    "tensorrt_llm/serve/tool_parser/deepseekv3_parser.py": "0ce3ac17dd004166da39a912f15696ee52311a97f14ab257269b25f292b39a80",
+    "tensorrt_llm/serve/tool_parser/deepseekv41_parser.py": "4dea0b168b0d791e915bd7e8cb18f01f8465e8cb11614674caa14875651b817d",
+    "tensorrt_llm/serve/tool_parser/deepseekv4_parser.py": "fa359ad2d17aa602154b9ac34cbb7c6fc9611854b3c247538976a837cc214840",
+    "tensorrt_llm/serve/tool_parser/gemma4_parser.py": "aa22ba9f2001c8bf6b546446f77e1834d96fe49bcf97c341429e836655816294",
+    "tensorrt_llm/serve/tool_parser/glm47_parser.py": "f01b3c9c49dab8f0fef2f1c408b8bbba46a255e9f7bb4cb9c99ff1cf0be29e9f",
+    "tensorrt_llm/serve/tool_parser/glm4_parser.py": "2130a0991f95cc47d929d9e190578691e579275f15921f2e750215b8cb8f1e77",
+    "tensorrt_llm/serve/tool_parser/kimi_k2_tool_parser.py": "c6aebc148abdd56ebb6f76faddc14326633cedf28b8808e76b4d9bc408c56fc9",
+    "tensorrt_llm/serve/tool_parser/kimi_k3_tool_parser.py": "4b792d99ce4825cfe178763cf3be4c61f960614888e8dd86bb0df93869d6d285",
+    "tensorrt_llm/serve/tool_parser/minimax_m2_parser.py": "074272a9fc8591dc794fa9e19ebb677cbb4cbf92ba199675c2d71fd9f289fe74",
+    "tensorrt_llm/serve/tool_parser/minimax_m3_parser.py": "0424a8f1d3ece94385ec0f349d673b12526c514d7edc75372f9562c0c5f5f436",
+    "tensorrt_llm/serve/tool_parser/poolside_v1_parser.py": "1a82a5cf25de16e44ef4d8dd68a29fe1b6235c038876088b17a27abf2c77db9f",
+    "tensorrt_llm/serve/tool_parser/qwen3_coder_parser.py": "5b55bcc9f6bf764fd4c29699ee8ac267e346146eba15a59da92697ed18f3be35",
+    "tensorrt_llm/serve/tool_parser/qwen3_tool_parser.py": "deaf6df96bd7f6609c14fa467e0038d3b5364430226467d58bb23a7c3bbd8fcb",
+    "tensorrt_llm/serve/tool_parser/tool_parser_factory.py": "7cc063306850deaf034a40569373c68492928efc827c5a92aa8e22b0cce115ad",
+    "tensorrt_llm/serve/tool_parser/utils.py": "3d070fecdddaa2884df131b940a27a7745be72bc840246df4f22594e7a5f1239"
+  }
+}

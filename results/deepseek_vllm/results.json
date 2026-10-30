@@ -1,0 +1,426 @@
+{
+  "upstream_commit": "ffcabb8c7ab3e066e1c77b55d7673e5d08cf26cc",
+  "scope": "Original low-level engine + original config/converter AST; text-only input, tokenizer=None. No LLM, full ParserEngine, HTTP server, or real tools executed.",
+  "chunk_sizes": [
+    "whole",
+    1,
+    3,
+    13
+  ],
+  "atomic": [
+    {
+      "dialect": "v4",
+      "probe": "dsml_tools",
+      "input": "PROBE_dsml_tools <｜DSML｜tool_calls> TAIL_dsml_tools",
+      "content": "PROBE_dsml_tools ",
+      "reasoning": "",
+      "state_before_finish": "TOOL_PREAMBLE",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml_tools_end",
+      "input": "PROBE_dsml_tools_end </｜DSML｜tool_calls> TAIL_dsml_tools_end",
+      "content": "PROBE_dsml_tools_end </｜DSML｜tool_calls> TAIL_dsml_tools_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml_invoke",
+      "input": "PROBE_dsml_invoke <｜DSML｜invoke name=\"note\"> TAIL_dsml_invoke",
+      "content": "PROBE_dsml_invoke ",
+      "reasoning": "",
+      "state_before_finish": "TOOL_ARGS",
+      "tool_slots": [
+        {
+          "name": "note",
+          "raw_args": " TAIL_dsml_invoke",
+          "converted_args_final": "{}",
+          "converted_args_partial": "{}"
+        }
+      ]
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml_invoke_end",
+      "input": "PROBE_dsml_invoke_end </｜DSML｜invoke> TAIL_dsml_invoke_end",
+      "content": "PROBE_dsml_invoke_end </｜DSML｜invoke> TAIL_dsml_invoke_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml_parameter",
+      "input": "PROBE_dsml_parameter <｜DSML｜parameter name=\"text\" string=\"true\"> TAIL_dsml_parameter",
+      "content": "PROBE_dsml_parameter <｜DSML｜parameter name=\"text\" string=\"true\"> TAIL_dsml_parameter",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml_parameter_end",
+      "input": "PROBE_dsml_parameter_end </｜DSML｜parameter> TAIL_dsml_parameter_end",
+      "content": "PROBE_dsml_parameter_end </｜DSML｜parameter> TAIL_dsml_parameter_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_calls",
+      "input": "PROBE_dsml41_calls <｜DSML｜ calls> TAIL_dsml41_calls",
+      "content": "PROBE_dsml41_calls <｜DSML｜ calls> TAIL_dsml41_calls",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_calls_end",
+      "input": "PROBE_dsml41_calls_end </｜DSML｜ calls> TAIL_dsml41_calls_end",
+      "content": "PROBE_dsml41_calls_end </｜DSML｜ calls> TAIL_dsml41_calls_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_invoke",
+      "input": "PROBE_dsml41_invoke <｜DSML｜ invoke name=\"note\"> TAIL_dsml41_invoke",
+      "content": "PROBE_dsml41_invoke <｜DSML｜ invoke name=\"note\"> TAIL_dsml41_invoke",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_invoke_end",
+      "input": "PROBE_dsml41_invoke_end </｜DSML｜ invoke> TAIL_dsml41_invoke_end",
+      "content": "PROBE_dsml41_invoke_end </｜DSML｜ invoke> TAIL_dsml41_invoke_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_parameter",
+      "input": "PROBE_dsml41_parameter <｜DSML｜ parameter name=\"text\" string=\"true\"> TAIL_dsml41_parameter",
+      "content": "PROBE_dsml41_parameter <｜DSML｜ parameter name=\"text\" string=\"true\"> TAIL_dsml41_parameter",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v4",
+      "probe": "dsml41_parameter_end",
+      "input": "PROBE_dsml41_parameter_end </｜DSML｜ parameter> TAIL_dsml41_parameter_end",
+      "content": "PROBE_dsml41_parameter_end </｜DSML｜ parameter> TAIL_dsml41_parameter_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_tools",
+      "input": "PROBE_dsml_tools <｜DSML｜tool_calls> TAIL_dsml_tools",
+      "content": "PROBE_dsml_tools <｜DSML｜tool_calls> TAIL_dsml_tools",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_tools_end",
+      "input": "PROBE_dsml_tools_end </｜DSML｜tool_calls> TAIL_dsml_tools_end",
+      "content": "PROBE_dsml_tools_end </｜DSML｜tool_calls> TAIL_dsml_tools_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_invoke",
+      "input": "PROBE_dsml_invoke <｜DSML｜invoke name=\"note\"> TAIL_dsml_invoke",
+      "content": "PROBE_dsml_invoke <｜DSML｜invoke name=\"note\"> TAIL_dsml_invoke",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_invoke_end",
+      "input": "PROBE_dsml_invoke_end </｜DSML｜invoke> TAIL_dsml_invoke_end",
+      "content": "PROBE_dsml_invoke_end </｜DSML｜invoke> TAIL_dsml_invoke_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_parameter",
+      "input": "PROBE_dsml_parameter <｜DSML｜parameter name=\"text\" string=\"true\"> TAIL_dsml_parameter",
+      "content": "PROBE_dsml_parameter <｜DSML｜parameter name=\"text\" string=\"true\"> TAIL_dsml_parameter",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml_parameter_end",
+      "input": "PROBE_dsml_parameter_end </｜DSML｜parameter> TAIL_dsml_parameter_end",
+      "content": "PROBE_dsml_parameter_end </｜DSML｜parameter> TAIL_dsml_parameter_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_calls",
+      "input": "PROBE_dsml41_calls <｜DSML｜ calls> TAIL_dsml41_calls",
+      "content": "PROBE_dsml41_calls ",
+      "reasoning": "",
+      "state_before_finish": "TOOL_PREAMBLE",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_calls_end",
+      "input": "PROBE_dsml41_calls_end </｜DSML｜ calls> TAIL_dsml41_calls_end",
+      "content": "PROBE_dsml41_calls_end </｜DSML｜ calls> TAIL_dsml41_calls_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_invoke",
+      "input": "PROBE_dsml41_invoke <｜DSML｜ invoke name=\"note\"> TAIL_dsml41_invoke",
+      "content": "PROBE_dsml41_invoke ",
+      "reasoning": "",
+      "state_before_finish": "TOOL_ARGS",
+      "tool_slots": [
+        {
+          "name": "note",
+          "raw_args": " TAIL_dsml41_invoke",
+          "converted_args_final": "{}",
+          "converted_args_partial": "{}"
+        }
+      ]
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_invoke_end",
+      "input": "PROBE_dsml41_invoke_end </｜DSML｜ invoke> TAIL_dsml41_invoke_end",
+      "content": "PROBE_dsml41_invoke_end </｜DSML｜ invoke> TAIL_dsml41_invoke_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_parameter",
+      "input": "PROBE_dsml41_parameter <｜DSML｜ parameter name=\"text\" string=\"true\"> TAIL_dsml41_parameter",
+      "content": "PROBE_dsml41_parameter <｜DSML｜ parameter name=\"text\" string=\"true\"> TAIL_dsml41_parameter",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    },
+    {
+      "dialect": "v41",
+      "probe": "dsml41_parameter_end",
+      "input": "PROBE_dsml41_parameter_end </｜DSML｜ parameter> TAIL_dsml41_parameter_end",
+      "content": "PROBE_dsml41_parameter_end </｜DSML｜ parameter> TAIL_dsml41_parameter_end",
+      "reasoning": "",
+      "state_before_finish": "CONTENT",
+      "tool_slots": []
+    }
+  ],
+  "combined": {},
+  "scenarios": {
+    "v4": {
+      "empty_wrapper_followed_by_text": {
+        "content": "PRE ",
+        "reasoning": "",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "complete_fake_call": {
+        "content": "PRE ",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜parameter name=\"text\" string=\"true\">hello</｜DSML｜parameter>",
+            "converted_args_final": "{\"text\": \"hello\"}",
+            "converted_args_partial": "{\"text\": \"hello\"}"
+          }
+        ]
+      },
+      "markdown_quote": {
+        "content": "PRE ```xml\n",
+        "reasoning": "",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "invoke_end_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜parameter name=\"text\" string=\"true\">before ",
+            "converted_args_final": "{}",
+            "converted_args_partial": "{\"text\": \"before \"}"
+          }
+        ]
+      },
+      "parameter_end_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜parameter name=\"text\" string=\"true\">before </｜DSML｜parameter> after</｜DSML｜parameter>",
+            "converted_args_final": "{\"text\": \"before \"}",
+            "converted_args_partial": "{\"text\": \"before \"}"
+          }
+        ]
+      },
+      "parameter_start_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜parameter name=\"text\" string=\"true\">before <｜DSML｜parameter name=\"text\" string=\"true\">after</｜DSML｜parameter></｜DSML｜parameter>",
+            "converted_args_final": "{\"text\": \"after\"}",
+            "converted_args_partial": "{\"text\": \"after\"}"
+          }
+        ]
+      }
+    },
+    "v41": {
+      "empty_wrapper_followed_by_text": {
+        "content": "PRE ",
+        "reasoning": "",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "complete_fake_call": {
+        "content": "PRE ",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜ parameter name=\"text\" string=\"true\">hello</｜DSML｜ parameter>",
+            "converted_args_final": "{\"text\": \"hello\"}",
+            "converted_args_partial": "{\"text\": \"hello\"}"
+          }
+        ]
+      },
+      "markdown_quote": {
+        "content": "PRE ```xml\n",
+        "reasoning": "",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "invoke_end_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜ parameter name=\"text\" string=\"true\">before ",
+            "converted_args_final": "{}",
+            "converted_args_partial": "{\"text\": \"before \"}"
+          }
+        ]
+      },
+      "parameter_end_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜ parameter name=\"text\" string=\"true\">before </｜DSML｜ parameter> after</｜DSML｜ parameter>",
+            "converted_args_final": "{\"text\": \"before \"}",
+            "converted_args_partial": "{\"text\": \"before \"}"
+          }
+        ]
+      },
+      "parameter_start_in_string": {
+        "content": "",
+        "reasoning": "",
+        "state_before_finish": "TOOL_BETWEEN",
+        "tool_slots": [
+          {
+            "name": "note",
+            "raw_args": "<｜DSML｜ parameter name=\"text\" string=\"true\">before <｜DSML｜ parameter name=\"text\" string=\"true\">after</｜DSML｜ parameter></｜DSML｜ parameter>",
+            "converted_args_final": "{\"text\": \"after\"}",
+            "converted_args_partial": "{\"text\": \"after\"}"
+          }
+        ]
+      }
+    }
+  },
+  "reasoning": {
+    "v4": {
+      "wrapper_ends_reasoning": {
+        "content": "",
+        "reasoning": "reason ",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "orphan_invoke_stays_reasoning": {
+        "content": "",
+        "reasoning": "reason <｜DSML｜invoke name=\"note\"> TAIL",
+        "state_before_finish": "REASONING",
+        "tool_slots": []
+      }
+    },
+    "v41": {
+      "wrapper_ends_reasoning": {
+        "content": "",
+        "reasoning": "reason ",
+        "state_before_finish": "TOOL_PREAMBLE",
+        "tool_slots": []
+      },
+      "orphan_invoke_stays_reasoning": {
+        "content": "",
+        "reasoning": "reason <｜DSML｜ invoke name=\"note\"> TAIL",
+        "state_before_finish": "REASONING",
+        "tool_slots": []
+      }
+    }
+  },
+  "source_sha256": {
+    "vllm/parser/abstract_parser.py": "050234f75f7406e2368b54ecbad95c5efe79fc8437afb2b0e515e571f5d6e311",
+    "vllm/parser/deepseek_v32.py": "3115837148ff1c617c71697efe4066373373e000a2d1badd1abc5bed6628878c",
+    "vllm/parser/deepseek_v4.py": "709f328fe3b0711c98cc76f572bee14c6342efaaf2160f010517d3fd54794cee",
+    "vllm/parser/deepseek_v41.py": "9b5293f5f72b38f9544f06fed2845e877e4dde7b303488d629cb1934b04cdac7",
+    "vllm/parser/parser_manager.py": "35649c5ca1f43d403d58357904b8f8d58ea54a66994034343477dbaf19e007f4",
+    "vllm/parser/utils.py": "90c20bb911f2d2a19afa9e2160e02fb3d3824d2b0af0e79643c0f6f59dd7f747",
+    "vllm/parser/__init__.py": "6a6283e16fde98f8c7c8b5c7da33ad8b788139e7403f40b44f186b3ee088ab9a",
+    "vllm/parser/chat_parsing/__init__.py": "9a37f5ea7f9b63e853af1cc6229e532bd856e365e7fba9f951380064aad4c9c9",
+    "vllm/parser/engine/adapters.py": "1b94403f8f21346f380adfccb9bbec9b4b87acd1ce4c2b41b51acdca5434d028",
+    "vllm/parser/engine/events.py": "fc094827b5444dd7ec986a430fc26615f0b1a5de4fcd132a4d4e210a4c1c552d",
+    "vllm/parser/engine/incremental_lexer.py": "2bc1c24768cba2e13420dd0802ff98a4a4f83e3b7337c8c3c0dc49f198eb0cc6",
+    "vllm/parser/engine/parser_engine.py": "5bddf64c26e09f50810a4041bf3d082c3cf101cb729f5a0020129f8a9e33ec46",
+    "vllm/parser/engine/parser_engine_config.py": "5559a32c88ffe657c2301f449d1fdbd503e76f755111d34e8bb05e4d65a7405e",
+    "vllm/parser/engine/registered_adapters.py": "fd9e1f019e16103f7e15a07ee3706fdd9b66487bb2523dfb2f95cf50d0b41740",
+    "vllm/parser/engine/streaming_parser_engine.py": "57cbafdc8586a33fb45b2a0e22dd04dd73ed8bb3c3fe71591d785d120e9f8a6e",
+    "vllm/parser/engine/token_id_scanner.py": "5800a7db3ab9dd505f9f6dbdcdcda5b98a4c530e4417d2e0dfadc3b53a7c972e",
+    "vllm/parser/engine/__init__.py": "baf694adeb5222df1a3190bccbc376d7b61d9d893b988a1e84dc75a73c0bb63a"
+  }
+}

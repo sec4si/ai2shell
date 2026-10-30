@@ -1,0 +1,93 @@
+{
+  "comment": "Tool-call marker registry for the six models in specs/study_scope.json.",
+  "dialects": {
+    "dsml_v4": {
+      "model_family": "deepseek",
+      "style": "per_param_tags",
+      "markers": {
+        "open": "<｜DSML｜tool_calls>",
+        "close": "</｜DSML｜tool_calls>",
+        "invoke": "<｜DSML｜invoke name=",
+        "invoke_end": "</｜DSML｜invoke>",
+        "param": "<｜DSML｜parameter name=",
+        "param_end": "</｜DSML｜parameter>"
+      },
+      "name_convention": "json-quoted after invoke, closed with >",
+      "param_attr": " string=\"true\"",
+      "extra_open_spellings": [
+        "<｜DSML｜toolcalls>",
+        "<｜DSML｜tool>"
+      ]
+    },
+    "dsml_v41": {
+      "model_family": "deepseek",
+      "style": "per_param_tags",
+      "markers": {
+        "open": "<｜DSML｜ calls>",
+        "close": "</｜DSML｜ calls>",
+        "invoke": "<｜DSML｜ invoke name=",
+        "invoke_end": "</｜DSML｜ invoke>",
+        "param": "<｜DSML｜ parameter name=",
+        "param_end": "</｜DSML｜ parameter>"
+      },
+      "name_convention": "json-quoted after invoke, closed with >; the space after ｜DSML｜ is part of the token",
+      "param_attr": " string=\"true\""
+    },
+    "kimi_k2": {
+      "model_family": "kimi",
+      "style": "json_blob",
+      "markers": {
+        "open": "<|tool_calls_section_begin|>",
+        "close": "<|tool_calls_section_end|>",
+        "invoke": "<|tool_call_begin|>",
+        "invoke_end": "<|tool_call_end|>",
+        "name_prefix": "functions.",
+        "arg_begin": "<|tool_call_argument_begin|>"
+      },
+      "name_convention": "functions.<name>:<index> then arg_begin, then a single JSON blob argument",
+      "extra_section_spellings": [
+        "<|tool_call_section_begin|>",
+        "<|tool_call_section_end|>"
+      ],
+      "notes": "Dynamo also accepts the singular section variants. Ollama's official kimi-k2 model package uses DeepSeek-style markers instead of these."
+    },
+    "kimi_k3": {
+      "model_family": "kimi",
+      "style": "per_param_tags",
+      "markers": {
+        "open": "<|open|>tools<|sep|>",
+        "close": "<|close|>tools<|sep|>",
+        "invoke": "<|open|>call tool=",
+        "invoke_end": "<|close|>call<|sep|>",
+        "param": "<|open|>argument key=",
+        "param_end": "<|close|>argument<|sep|>"
+      },
+      "name_convention": "attribute style: tool=\"name\" index=\"0\" closed by <|sep|>; params carry key=\"k\" type=\"string\"",
+      "notes": "XTML attribute dialect; structurally isomorphic to DSML, so the five ways hold the same way. Also uses <|open|>think<|sep|>/<|close|>think<|sep|> for reasoning."
+    },
+    "qwen_coder": {
+      "model_family": "qwen",
+      "style": "per_param_tags",
+      "markers": {
+        "open": "<tool_call>",
+        "close": "</tool_call>",
+        "invoke": "<function=",
+        "invoke_end": "</function>",
+        "param": "<parameter=",
+        "param_end": "</parameter>"
+      },
+      "name_convention": "bare name after invoke, closed with >"
+    },
+    "qwen": {
+      "model_family": "qwen",
+      "style": "json_blob",
+      "markers": {
+        "open": "<tool_call>",
+        "close": "</tool_call>",
+        "invoke": "",
+        "invoke_end": "</tool_call>"
+      },
+      "name_convention": "the whole call is one JSON object {\"name\": ..., \"arguments\": {...}}"
+    }
+  }
+}

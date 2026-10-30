@@ -1,0 +1,18 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.go text eol=lf
+*.rs text eol=lf
+*.cpp text eol=lf
+CMakeLists.txt text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+# Keep pinned source and evidence bytes intact, including their original newlines.
+sources/** -text
+results/** -text
+specs/** -text

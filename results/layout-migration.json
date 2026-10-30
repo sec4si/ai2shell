@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "description": "Repository preparation relocated files. Original observations and historical audit flags are retained.",
+  "moves": {
+    "报告.md": "docs/reports/报告.md",
+    "参考.md": "docs/reports/参考.md",
+    "输入输出对照.md": "docs/reports/输入输出对照.md",
+    "docs/five_ways_io.md": "docs/reports/five_ways_io.md",
+    "docs/io_examples.json": "results/exports/io_examples.json",
+    "docs/article_trigger_variants.json": "results/exports/article_trigger_variants.json",
+    "docs/report_audit.json": "results/audits/report_audit.json",
+    "docs/five_ways_evidence_audit.json": "results/audits/five_ways_evidence_audit.json",
+    "results/five_ways_evidence.json": "results/exports/five_ways_evidence.json",
+    "probes/common/deepseek-v4.1-flash-1017__pentest_dsml_gateway_results.json": "results/online/deepseek-v4.1-flash-1017__pentest_dsml_gateway/online_results.json",
+    "results/online/deepseek-v4.1-flash-1017__bash_id/pentest_site5_results.json": "results/online/deepseek-v4.1-flash-1017__pentest_dsml_gateway/pentest_site5_results.json",
+    "probes/common/audit_five_ways_evidence.py": "probes/analysis/audit_five_ways_evidence.py",
+    "probes/common/export_io_examples.py": "probes/analysis/export_io_examples.py",
+    "probes/common/online_bash_id.py": "probes/online/online_bash_id.py",
+    "probes/common/online_bash_id_loop.py": "probes/online/online_bash_id_loop.py",
+    "probes/common/online_pentest_site.py": "probes/online/online_pentest_site.py",
+    "probes/common/online_probes.py": "probes/online/online_probes.py",
+    "probes/common/online_probes_k3.py": "probes/online/online_probes_k3.py",
+    "probes/common/online_probes_k3_anthropic.py": "probes/online/online_probes_k3_anthropic.py",
+    "probes/common/report_audit.py": "probes/analysis/report_audit.py",
+    "probes/common/select_article_variants.py": "probes/analysis/select_article_variants.py"
+  }
+}

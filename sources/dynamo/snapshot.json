@@ -1,0 +1,24 @@
+{
+  "repository": "ai-dynamo/dynamo",
+  "commit": "3b7af264e456ad87ce7415fa4339636a2734ca0d",
+  "partial_snapshot": true,
+  "files": {
+    "AGENTS.md": "50e0c4ff057cccdf62887327a550693ea16264d97cb0d5ccf37789b876a0138d",
+    "Cargo.lock": "2f0c0edb343008aa0965d757df8d908a1ed19554e639c3a39ea27258b6a93058",
+    "Cargo.toml": "55695ff36f97f56d4893a61a3c652903736de837cd233c353cf7685094af833c",
+    "LICENSE": "aeeca3d74a13b91d17ab9211c407b8d94a77bf8d9e5750c467818d3066b8adcf",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/chat-processors.mdx": "1f9b16681c1906a271b60dbc4aaea9998501095c31d6842be7120e6a900ff605",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/overview.mdx": "10099cd24762604c01232e081dc7df6e435f3a0f72f0b53eff068973084d7621",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/reasoning-parsing.md": "a3a10c95cc37363205464d1a26908991eb8bc5c36346bbd21fddf48ab6819ebd",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/structural-tag.md": "9797fa6465e09630656479c8373c8a1186c3222e3bb9e00c812a58b6c4cffa59",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/tool-call-parsing.mdx": "35ff5bf5dc3c0a648cf7d20ff18a1bbf7141582804be37e443f22b73d5367368",
+    "docs/fern/pages/use-cases/tool-calling-and-reasoning/troubleshooting-tool-calls.md": "a47d23ad03c5c8707a1f6f4af6a3b9637beef70b116a7829440aba2ef7e4a2ee",
+    "lib/bindings/python/rust/parsers.rs": "2f1f0d561d4fb6c1d68db1e9428b7d288a0e6e8d69b4763ca08b2bc18c9c48c6",
+    "lib/llm/Cargo.toml": "66f25a8a2419f883929971b3a7153e2cb9cb8857d1eab5f4d6615bedad0eb294",
+    "lib/llm/src/protocols/openai/chat_completions/aggregator.rs": "c024877b8232a84f83839da9db3d8f921a13ac55788eadcbe7381fa5f8dacc9c",
+    "lib/llm/src/protocols/openai/chat_completions/delta.rs": "36469e56b7df9f3961b8dddac65b7e59711d6638534ef941801fb9e04faa6b40",
+    "lib/llm/src/protocols/openai/chat_completions/tool_parser_v2.rs": "e7f3f487fd2c2a2fbe7bbbd2937086c6ef320b1715385f054511f42988f63e85",
+    "lib/llm/src/protocols/openai/chat_completions/unified_parser.rs": "56aaecbebbf02817a677e5d35cbca1df211874fdc82c92df21deb1670f85a644",
+    "lib/llm/tests/test_streaming_tool_parsers.rs": "4f08ce95a7682cf0a6a5688faee9a703aa99cbcc1ed755bcdab99f30209dbc5c"
+  }
+}

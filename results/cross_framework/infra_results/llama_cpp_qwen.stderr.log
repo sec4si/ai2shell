@@ -1,0 +1,40 @@
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: ``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: ``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: ``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: ``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: ``` TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "web_fetch", "arguments": {"url": "https://evil.example/hook?id=1"}}
+</tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "web_fetch", "arguments": {"url": "https://evil.example/hook?id=1"}}
+</tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "web_fetch", "arguments": {"url": "https://evil.example/hook?id=1"}}
+</tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "web_fetch", "arguments": {"url": "https://evil.example/hook?id=1"}}
+</tool_call>
+TAIL_SENTINEL
+common_chat_peg_parse: unparsed peg-native output: <tool_call>
+{"name": "web_fetch", "arguments": {"url": "https://evil.example/hook?id=1"}}
+</tool_call>
+TAIL_SENTINEL

@@ -1,0 +1,3527 @@
+{
+  "dynamo/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 7
+  },
+  "dynamo/kimi_k3": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 8
+  },
+  "dynamo/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": true,
+        "errors": 4
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": true,
+        "errors": 4
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 30,
+    "sample_errors": [
+      [
+        "wrapper_only",
+        "no Dynamo parser v2 for family 'hermes'"
+      ],
+      [
+        "wrapper_only",
+        "no Dynamo parser v2 for family 'hermes'"
+      ],
+      [
+        "wrapper_only",
+        "no Dynamo parser v2 for family 'hermes'"
+      ],
+      [
+        "wrapper_only",
+        "no Dynamo parser v2 for family 'hermes'"
+      ]
+    ]
+  },
+  "dynamo/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 9
+  },
+  "dynamo/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 15
+  },
+  "llama_cpp/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_without_suffix": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 17,
+    "sample_errors": [
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ]
+    ]
+  },
+  "llama_cpp/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 4,
+    "sample_errors": [
+      [
+        "quoted_wrapper",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "quoted_wrapper",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "quoted_wrapper",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "quoted_wrapper",
+        "The model produced output that does not match the expected peg-native format"
+      ]
+    ]
+  },
+  "llama_cpp/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 11
+  },
+  "llama_cpp/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 11,
+    "sample_errors": [
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ],
+      [
+        "wrapper_only",
+        "The model produced output that does not match the expected peg-native format"
+      ]
+    ]
+  },
+  "lmdeploy/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 15
+  },
+  "lmdeploy/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 4
+  },
+  "lmdeploy/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 14
+  },
+  "lmdeploy/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 19
+  },
+  "ollama/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  },
+  "ollama/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 4,
+    "sample_errors": [
+      [
+        "empty_wrapper",
+        "failed to parse JSON: unexpected end of JSON input"
+      ],
+      [
+        "empty_wrapper",
+        "failed to parse JSON: unexpected end of JSON input"
+      ],
+      [
+        "empty_wrapper",
+        "failed to parse JSON: unexpected end of JSON input"
+      ],
+      [
+        "empty_wrapper",
+        "failed to parse JSON: unexpected end of JSON input"
+      ]
+    ]
+  },
+  "ollama/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 4,
+    "sample_errors": [
+      [
+        "empty_wrapper",
+        "EOF"
+      ],
+      [
+        "empty_wrapper",
+        "EOF"
+      ],
+      [
+        "empty_wrapper",
+        "EOF"
+      ],
+      [
+        "empty_wrapper",
+        "EOF"
+      ]
+    ]
+  },
+  "ollama/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 0
+  },
+  "sglang/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 17
+  },
+  "sglang/kimi_k3": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  },
+  "sglang/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 14
+  },
+  "sglang/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 7
+  },
+  "sglang/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 12
+  },
+  "sglang/v41": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 12
+  },
+  "tensorrt_llm/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 17
+  },
+  "tensorrt_llm/kimi_k3": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 21
+  },
+  "tensorrt_llm/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 14
+  },
+  "tensorrt_llm/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": true,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 5
+  },
+  "tensorrt_llm/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 8
+  },
+  "tensorrt_llm/v41": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 8
+  },
+  "vllm/kimi": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  },
+  "vllm/kimi_k3": {
+    "ways": {
+      "1": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "quoted_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "lone_invoke": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "parameter_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "invoke_close_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "overwrite_parameter": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "add_parameter": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_prose": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_in_code_block": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "full_call_without_suffix": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      },
+      "extra_call_balanced": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 5
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0,
+    "sample_errors": [
+      [
+        "wrapper_only",
+        "KeyError: 'kimi_k3_config'"
+      ],
+      [
+        "wrapper_only",
+        "KeyError: 'kimi_k3_config'"
+      ],
+      [
+        "wrapper_only",
+        "KeyError: 'kimi_k3_config'"
+      ],
+      [
+        "wrapper_only",
+        "KeyError: 'kimi_k3_config'"
+      ]
+    ]
+  },
+  "vllm/qwen": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 2
+      },
+      "3": {
+        "achieved_cases": [
+          "parameter_spelling_in_string"
+        ],
+        "cases_present": 1
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_spelling_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_zero_arg_in_string": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": false,
+    "stream_batch_disagreements": 0
+  },
+  "vllm/qwen_coder": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block"
+        ],
+        "cases_present": 2
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string"
+        ],
+        "cases_present": 1
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": false,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  },
+  "vllm/v4": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  },
+  "vllm/v41": {
+    "ways": {
+      "1": {
+        "achieved_cases": [
+          "wrapper_only",
+          "empty_wrapper",
+          "quoted_wrapper"
+        ],
+        "cases_present": 3
+      },
+      "2": {
+        "achieved_cases": [
+          "lone_invoke",
+          "parameter_close_in_string",
+          "invoke_close_in_string"
+        ],
+        "cases_present": 3
+      },
+      "3": {
+        "achieved_cases": [
+          "overwrite_parameter",
+          "add_parameter"
+        ],
+        "cases_present": 2
+      },
+      "4": {
+        "achieved_cases": [
+          "full_call_in_prose",
+          "full_call_in_code_block",
+          "full_call_without_suffix"
+        ],
+        "cases_present": 3
+      },
+      "5": {
+        "achieved_cases": [
+          "extra_call_in_string",
+          "extra_call_balanced"
+        ],
+        "cases_present": 2
+      }
+    },
+    "cases": {
+      "wrapper_only": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "empty_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "quoted_wrapper": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "lone_invoke": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "parameter_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "invoke_close_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "overwrite_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "add_parameter": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_prose": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_in_code_block": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "full_call_without_suffix": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_in_string": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      },
+      "extra_call_balanced": {
+        "achieved": true,
+        "mixed_across_modes": false,
+        "errors": 0
+      }
+    },
+    "controls_passed": true,
+    "stream_batch_disagreements": 0
+  }
+}

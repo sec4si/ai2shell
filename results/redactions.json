@@ -1,0 +1,48 @@
+{
+  "scope": "Private gateway URLs only; prompts, tool arguments and model output are not otherwise rewritten.",
+  "originals": "Retained locally under the gitignored .local/repository-prep directory.",
+  "files": [
+    {
+      "path": "results/deepseek_vllm/e2e_results.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "36f4b1164d633eff3260705711a0cb19289cc8c2924fbf0135e73d09e0406386",
+      "published_sha256": "5c6e001972c77c0afeacd2dd721604026221cbf535628c4e41fb01234e1b41ea"
+    },
+    {
+      "path": "results/online/deepseek-v4.1-flash-1017__bash_id/bash_ls_success.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "131f3c745d0b7177b7f9e9b10b9e7efdccebf9eb0157d366224731b07b6f28c6",
+      "published_sha256": "bbfa6b0ccf682c8bb917a209035711234f74551f1beca2934790e2e3720a699d"
+    },
+    {
+      "path": "results/online/deepseek-v4.1-flash-1017__bash_id/online_results.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "3ef476d92763b3e4cedccd0c6b46aea421eedc5414c3e811f7f09cc031d039bd",
+      "published_sha256": "e8fba3178efee7e2726854b5af626130ae3d6ec3c05c57813c0c8ca2859d9b09"
+    },
+    {
+      "path": "results/online/deepseek-v4.1-flash-1017__dsml_v41/online_results.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "b7201b149a969075f32c134738a967d1799fe6fc296e934950ed56175b2bf9a6",
+      "published_sha256": "cf683ebe4ea0bc783970299131ca9bb56f0601f4c3e10e03a33a98caf5557b76"
+    },
+    {
+      "path": "results/online/kimi-k3__kimi_k3/online_results.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "f5deeafe63b1171d38148beb0a051618b6ab0e1052f3c90b08179846324872b2",
+      "published_sha256": "dfed49c7f504b324c874511a23488b636909ad86fcaae201db445727beae8956"
+    },
+    {
+      "path": "results/online/kimi-k3__kimi_k3_anthropic/online_results.json",
+      "rule": "private_gateway_url",
+      "replacements": 1,
+      "original_sha256": "eab5d681fb0abe2b813a8f9a842f575d3014ee3d560c1b37908b5e6579af3fd2",
+      "published_sha256": "54ab10de5366c2c88d925f949624912ea957214d585aad707c570a655edc8173"
+    }
+  ]
+}

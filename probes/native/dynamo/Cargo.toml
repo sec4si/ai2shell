@@ -1,0 +1,14 @@
+[package]
+name = "infra-dynamo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dynamo-parsers = { path = "../../../sources/dynamo_dependencies/dynamo-parsers-10.0.7" }
+dynamo-parsers-v2 = { path = "../../../sources/dynamo_dependencies/dynamo-parsers-v2-0.7.35" }
+serde_json = "1"
+futures = "0.3"
+tokio = { version = "1", features = ["rt", "macros"] }
+
+[profile.dev]
+debug = 0

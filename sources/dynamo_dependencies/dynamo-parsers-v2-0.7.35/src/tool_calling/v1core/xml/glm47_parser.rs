@@ -1,0 +1,1676 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+// SPDX-License-Identifier: Apache-2.0
+
+// GLM-4.7 Tool Call Parser
+// Format: <tool_call>function_name<arg_key>param1</arg_key><arg_value>value1</arg_value></tool_call>
+// Reference: https://huggingface.co/zai-org/GLM-4.7/blob/main/chat_template.jinja
+
+use regex::Regex;
+use serde_json::Value;
+use std::collections::HashMap;
+use tracing::warn;
+use uuid::Uuid;
+
+use super::super::ToolDefinition;
+use super::super::config::Glm47ParserConfig;
+use super::parsed_value::{ParsedValue, coerce_integer_literal};
+use super::response::{CalledFunction, ToolCallResponse, ToolCallType};
+
+/// Render a tool_call block snippet for logs. Bounded so a huge truncated
+/// argument body doesn't blow up the log line; control chars are escaped
+/// because raw newlines/tabs make the warning unreadable in grep/jq.
+fn truncate_for_log(s: &str) -> String {
+    const MAX: usize = 200;
+    let mut out = String::with_capacity(MAX.min(s.len()) + 16);
+    let mut bytes = 0usize;
+    for ch in s.chars() {
+        if bytes >= MAX {
+            out.push('…');
+            break;
+        }
+        match ch {
+            '\n' => out.push_str("\\n"),
+            '\r' => out.push_str("\\r"),
+            '\t' => out.push_str("\\t"),
+            c => out.push(c),
+        }
+        bytes += ch.len_utf8();
+    }
+    out
+}
+
+/// Try to parse GLM-4.7 formatted tool calls from a message.
+/// Format: <tool_call>function_name<arg_key>param1</arg_key><arg_value>value1</arg_value></tool_call>
+/// Returns (parsed_tool_calls, normal_text_content)
+pub fn try_tool_call_parse_glm47(
+    message: &str,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<(Vec<ToolCallResponse>, Option<String>)> {
+    let (normal_text, tool_calls) = extract_tool_calls(message, config, tools)?;
+
+    let normal_content = if normal_text.is_empty() {
+        Some("".to_string())
+    } else {
+        Some(normal_text)
+    };
+
+    Ok((tool_calls, normal_content))
+}
+
+/// Extract tool calls and normal text from message.
+///
+/// `normal_text` is the model text with each complete tool-call block removed
+/// (from its `<tool_call>` start through its `</tool_call>` end), keeping ALL
+/// other text verbatim: the prefix before the first call, text BETWEEN calls,
+/// and text AFTER the last call. Whitespace is preserved as-is. Only tool-call
+/// markup is stripped — natural text is never dropped and markup never leaks
+/// into normal_text. Malformed / unrecoverable blocks (missing fences, truncated
+/// tails) keep the drop-without-leak behavior.
+fn extract_tool_calls(
+    text: &str,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<(String, Vec<ToolCallResponse>)> {
+    let mut normal_parts = Vec::new();
+    let mut calls = Vec::new();
+    let mut cursor = 0;
+
+    let start_token = &config.tool_call_start;
+    let end_token = &config.tool_call_end;
+
+    if !text.contains(start_token.as_str())
+        && let Some(marker_idx) = first_orphan_glm47_marker_index(text, config)
+    {
+        if let Some((prefix, mut parsed_calls)) =
+            recover_bare_glm47_calls(text, marker_idx, config, tools)?
+        {
+            let recovered_calls = parsed_calls.len();
+            warn!(
+                why = "bare_body_recovery",
+                recovered_calls,
+                recovered_bytes = text.len() - prefix.len(),
+                kept_prefix_bytes = prefix.len(),
+                "GLM-4.7 parser recovered complete bare call body/bodies without <tool_call> start"
+            );
+            calls.append(&mut parsed_calls);
+            return Ok((prefix, calls));
+        }
+        warn!(
+            why = "GLM-4.7 tool-call marker found without <tool_call> start; dropping orphan marker tail so wire tags do not leak into normal_text",
+            dropped_block = %truncate_for_log(&text[marker_idx..]),
+            "GLM-4.7 parser dropping orphan tool-call marker tail"
+        );
+        return Ok((orphan_glm47_prefix(text, marker_idx), calls));
+    }
+
+    while cursor < text.len() {
+        // Find next tool call start
+        if let Some(start_pos) = text[cursor..].find(start_token.as_str()) {
+            let abs_start = cursor + start_pos;
+            let gap = &text[cursor..abs_start];
+            // Preserve ALL surrounding natural-language text — the prefix before
+            // the first <tool_call>, text BETWEEN calls, and (in the no-more-calls
+            // arm below) text AFTER the last call. Only tool-call markup is
+            // stripped: recover_bare_glm47_calls_in_span pulls a bare call out of
+            // the gap and keeps its `prefix` prose; orphan_glm47_prefix drops a
+            // stray wire marker but keeps the text before it. The gap text is kept
+            // regardless of whether calls have already been parsed, so inter-call
+            // narration is no longer dropped.
+            if let Some((prefix, mut parsed_calls)) =
+                recover_bare_glm47_calls_in_span(gap, config, tools)?
+            {
+                normal_parts.push(prefix);
+                calls.append(&mut parsed_calls);
+            } else if let Some(marker_idx) = first_orphan_glm47_marker_index(gap, config) {
+                normal_parts.push(orphan_glm47_prefix(gap, marker_idx));
+            } else {
+                normal_parts.push(gap.to_string());
+            }
+
+            // Find the corresponding end token
+            if let Some(end_pos) = text[abs_start..].find(end_token.as_str()) {
+                let abs_end = abs_start + end_pos + end_token.len();
+                let block = &text[abs_start..abs_end];
+
+                // Parse this tool call block. Unparseable blocks (malformed
+                // <tool_call>...</tool_call> markup the parser can't extract)
+                // are dropped — emitting the raw markup as normal_text leaks
+                // wire tags downstream. vLLM and SGLang both drop on this
+                // path; aligning Dynamo to that contract.
+                match parse_tool_call_block(block, config, tools) {
+                    Ok(parsed_call) => calls.push(parsed_call),
+                    Err(e) => {
+                        warn!(
+                            reason = %e,
+                            why = "block has open + close fence but content failed to parse \
+                                   as a GLM-4.7 tool call (e.g. empty function name, \
+                                   missing <arg_key>, malformed args); dropping to avoid \
+                                   leaking wire tags through normal_text",
+                            dropped_block = %truncate_for_log(block),
+                            "GLM-4.7 parser dropping unparseable tool_call block"
+                        );
+                    }
+                }
+
+                cursor = abs_end;
+            } else {
+                // Recovery: outer </tool_call> absent (max_tokens / EOS
+                // truncation). Gated on `allow_eof_recovery` so streaming
+                // early-exit doesn't fire mid-stream. Also requires an
+                // `<arg_key>` opener in the trailing slice as the structural
+                // signal that a real tool call was emitted.
+                let block = &text[abs_start..];
+                let arg_key_start = &config.arg_key_start;
+                if config.allow_eof_recovery && block.contains(arg_key_start.as_str()) {
+                    match parse_tool_call_block(block, config, tools) {
+                        Ok(parsed_call) => {
+                            calls.push(parsed_call);
+                            cursor = text.len();
+                            continue;
+                        }
+                        Err(e) => {
+                            warn!(
+                                reason = %e,
+                                why = "EOF recovery enabled and <arg_key> opener present, \
+                                       but parse_tool_call_block failed on the truncated \
+                                       tail; dropping to avoid leaking wire tags through \
+                                       normal_text",
+                                dropped_block = %truncate_for_log(block),
+                                "GLM-4.7 parser dropping truncated tool_call block (recovery attempt failed)"
+                            );
+                        }
+                    }
+                } else {
+                    // Either recovery disabled (production default for GLM-4.7)
+                    // or no <arg_key> in the tail (so this is plausibly not a
+                    // real tool call at all, just a stray <tool_call> token).
+                    let reason = if !config.allow_eof_recovery {
+                        "allow_eof_recovery=false (production default for GLM-4.7 to match \
+                         vLLM/SGLang on truncated tool calls)"
+                    } else {
+                        "no <arg_key> in the tail after the <tool_call> start fence, so the \
+                         block does not look like a structurally-real GLM-4.7 tool call"
+                    };
+                    warn!(
+                        why = %reason,
+                        dropped_block = %truncate_for_log(block),
+                        "GLM-4.7 parser dropping truncated tool_call block (no end fence)"
+                    );
+                }
+                // Drop the truncated/unrecoverable tail. Emitting the raw
+                // <tool_call>...<arg_key>...<arg_value>... prefix as
+                // normal_text would leak wire tags into message.content; vLLM
+                // strips the same way on truncation.
+                break;
+            }
+        } else {
+            // No more tool calls: this gap is the text AFTER the last </tool_call>
+            // (or the whole message when no call was found). Preserve it verbatim,
+            // stripping only tool-call markup (bare-call recovery keeps its prose
+            // prefix; orphan_glm47_prefix drops a stray wire marker but keeps the
+            // text before it).
+            let gap = &text[cursor..];
+            if let Some((prefix, mut parsed_calls)) =
+                recover_bare_glm47_calls_in_span(gap, config, tools)?
+            {
+                normal_parts.push(prefix);
+                calls.append(&mut parsed_calls);
+            } else if let Some(marker_idx) = first_orphan_glm47_marker_index(gap, config) {
+                normal_parts.push(orphan_glm47_prefix(gap, marker_idx));
+            } else {
+                normal_parts.push(gap.to_string());
+            }
+            break;
+        }
+    }
+
+    let normal_text = normal_parts.join("");
+    let normal_text = if calls.is_empty() {
+        normal_text.trim().to_string()
+    } else {
+        normal_text
+    };
+    Ok((normal_text, calls))
+}
+
+fn recover_bare_glm47_calls_in_span(
+    span: &str,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<Option<(String, Vec<ToolCallResponse>)>> {
+    let Some(marker_idx) = first_orphan_glm47_marker_index(span, config) else {
+        return Ok(None);
+    };
+    let recovered = recover_bare_glm47_calls(span, marker_idx, config, tools)?;
+    if let Some((prefix, parsed_calls)) = recovered {
+        let recovered_calls = parsed_calls.len();
+        warn!(
+            why = "bare_body_gap_recovery",
+            recovered_calls,
+            recovered_bytes = span.len() - prefix.len(),
+            kept_prefix_bytes = prefix.len(),
+            "GLM-4.7 parser recovered complete bare call body/bodies before a later <tool_call>"
+        );
+        return Ok(Some((prefix, parsed_calls)));
+    }
+    Ok(None)
+}
+
+fn first_orphan_glm47_marker_index(text: &str, config: &Glm47ParserConfig) -> Option<usize> {
+    [
+        config.tool_call_end.as_str(),
+        config.arg_key_start.as_str(),
+        config.arg_key_end.as_str(),
+        config.arg_value_start.as_str(),
+        config.arg_value_end.as_str(),
+    ]
+    .into_iter()
+    .filter_map(|marker| text.find(marker))
+    .min()
+}
+
+fn orphan_glm47_prefix(text: &str, marker_idx: usize) -> String {
+    let prefix = text[..marker_idx].trim_end();
+    let token_start = prefix
+        .char_indices()
+        .rev()
+        .find(|(_, ch)| ch.is_whitespace())
+        .map(|(idx, ch)| idx + ch.len_utf8())
+        .unwrap_or(0);
+    let tail = &prefix[token_start..];
+    if !tail.is_empty()
+        && tail
+            .chars()
+            .all(|ch| ch.is_ascii_alphanumeric() || matches!(ch, '_' | '-' | '.'))
+    {
+        prefix[..token_start].trim().to_string()
+    } else {
+        prefix.trim().to_string()
+    }
+}
+
+fn recover_bare_glm47_calls(
+    text: &str,
+    marker_idx: usize,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<Option<(String, Vec<ToolCallResponse>)>> {
+    if !text[marker_idx..].contains(config.tool_call_end.as_str()) {
+        return Ok(None);
+    }
+
+    let before_marker = text[..marker_idx].trim_end();
+    let function_name_start = before_marker
+        .char_indices()
+        .rev()
+        .find(|(_, ch)| ch.is_whitespace())
+        .map(|(idx, ch)| idx + ch.len_utf8())
+        .unwrap_or(0);
+
+    let candidate_name = before_marker[function_name_start..].trim();
+    if candidate_name.is_empty()
+        || !candidate_name
+            .chars()
+            .all(|ch| ch.is_ascii_alphanumeric() || matches!(ch, '_' | '-' | '.'))
+    {
+        return Ok(None);
+    }
+
+    let prefix = text[..function_name_start].to_string();
+    let mut cursor = function_name_start;
+    let mut calls = Vec::new();
+
+    while cursor < text.len() {
+        let rest = &text[cursor..];
+        let trim_offset = rest.len() - rest.trim_start().len();
+        cursor += trim_offset;
+
+        let tail = &text[cursor..];
+        let Some(end_pos) = tail.find(config.tool_call_end.as_str()) else {
+            break;
+        };
+        let call_end = cursor + end_pos + config.tool_call_end.len();
+        let wrapped = format!("{}{}", config.tool_call_start, &text[cursor..call_end]);
+        calls.push(parse_tool_call_block(&wrapped, config, tools)?);
+        cursor = call_end;
+
+        if is_glm47_close_marker_spam(&text[cursor..], config) {
+            warn!(
+                why = "orphan_close_marker_spam",
+                dropped_block = %truncate_for_log(&text[cursor..]),
+                "GLM-4.7 parser dropping orphan close-marker spam after recovered bare call"
+            );
+            break;
+        }
+
+        if first_orphan_glm47_marker_index(&text[cursor..], config).is_none() {
+            break;
+        }
+    }
+
+    if calls.is_empty() {
+        return Ok(None);
+    }
+    Ok(Some((prefix, calls)))
+}
+
+fn is_glm47_close_marker_spam(text: &str, config: &Glm47ParserConfig) -> bool {
+    let mut rest = text.trim_start();
+    let mut saw_close = false;
+    while let Some(after_close) = rest.strip_prefix(config.tool_call_end.as_str()) {
+        saw_close = true;
+        rest = after_close.trim_start();
+    }
+    saw_close && rest.is_empty()
+}
+
+/// Coerce a raw string value using the tool's parameter schema.
+/// Falls back to string if no schema is available or the type is unrecognized.
+fn coerce_value(raw: &str, schema_type: Option<&str>) -> ParsedValue {
+    let trimmed = raw.trim();
+
+    // A `string` parameter is delivered verbatim: the model's text may
+    // legitimately look like JSON (an object, array, or quoted text), and
+    // parsing it would change its type behind the schema's back.
+    if matches!(schema_type, Some("string")) {
+        return Value::String(raw.to_string()).into();
+    }
+
+    // If the value already looks like JSON (object, array, or quoted string), parse it directly
+    if (trimmed.starts_with('{') || trimmed.starts_with('[') || trimmed.starts_with('"'))
+        && let Ok(v) = serde_json::from_str::<Value>(trimmed)
+    {
+        return v.into();
+    }
+
+    // Use schema type hints for coercion when available
+    match schema_type {
+        Some("integer") | Some("int") => {
+            if let Some(value) = coerce_integer_literal(trimmed) {
+                return value;
+            }
+        }
+        Some("number") | Some("float") | Some("double") => {
+            if let Some(value) = coerce_integer_literal(trimmed) {
+                return value;
+            }
+            if let Ok(n) = trimmed.parse::<f64>()
+                && let Some(num) = serde_json::Number::from_f64(n)
+            {
+                return Value::Number(num).into();
+            }
+        }
+        Some("boolean") | Some("bool") => match trimmed.to_lowercase().as_str() {
+            "true" | "1" | "yes" => return Value::Bool(true).into(),
+            "false" | "0" | "no" => return Value::Bool(false).into(),
+            _ => {}
+        },
+        Some("array") => {
+            // Try JSON parse first, then fall back to comma-separated splitting
+            if let Ok(v) = serde_json::from_str::<Value>(trimmed)
+                && v.is_array()
+            {
+                return v.into();
+            }
+            let items: Vec<Value> = trimmed
+                .split(',')
+                .map(|s| Value::String(s.trim().to_string()))
+                .collect();
+            return Value::Array(items).into();
+        }
+        Some("null") if trimmed == "null" || trimmed == "None" || trimmed.is_empty() => {
+            return Value::Null.into();
+        }
+        _ => {}
+    }
+
+    Value::String(raw.to_string()).into()
+}
+
+/// Look up the JSON Schema type for a parameter by name from a tool's parameter schema.
+fn get_param_schema_type<'a>(
+    tools: Option<&'a [ToolDefinition]>,
+    function_name: &str,
+    param_name: &str,
+    raw: &str,
+) -> Option<&'a str> {
+    let tool = tools?.iter().find(|t| t.name == function_name)?;
+    let schema = tool.parameters.as_ref()?;
+    let props = schema.get("properties")?;
+    let param = props.get(param_name)?;
+    // Prefer JSON null for a bare null when the schema permits it. The wire
+    // spelling can also represent a string; keep string preference for other values.
+    if raw.trim() == "null" {
+        return Some(if schema_permits_null(param, schema) {
+            "null"
+        } else {
+            "string"
+        });
+    }
+    // Prefer string in unions because JSON-looking text is ambiguous.
+    if schema_has_type(schema, param, "string", raw) {
+        return Some("string");
+    }
+    if let Some(schema_type) = param.get("type").and_then(Value::as_str) {
+        return Some(schema_type);
+    }
+    // Select a scalar hint from a union using the JSON value, not branch order.
+    let raw = raw.trim();
+    if !matches!(
+        raw.as_bytes().first(),
+        Some(b'n' | b't' | b'f' | b'-' | b'0'..=b'9')
+    ) {
+        return None;
+    }
+    // Preserve the integer coercer's arbitrary-length path before Value's numeric limit.
+    let candidates: &[&str] = if super::parsed_value::is_integer_literal(raw) {
+        &["integer", "number"]
+    } else {
+        match serde_json::from_str::<Value>(raw).ok()? {
+            Value::Null => &["null"],
+            Value::Bool(_) => &["boolean"],
+            Value::Number(_) => &["number"],
+            _ => &[],
+        }
+    };
+    candidates
+        .iter()
+        .copied()
+        .find(|candidate| schema_has_type(schema, param, candidate, raw))
+}
+
+const MAX_NULL_SCHEMA_REF_DEPTH: usize = 16;
+const MAX_NULL_SCHEMA_NODES: usize = 4096;
+
+// Only a proven match may turn the model's text into JSON null. Unknown references
+// must remain unknown through negation and oneOf, rather than counting as false.
+fn schema_permits_null(schema: &Value, root: &Value) -> bool {
+    let mut active_refs = vec![schema];
+    let mut remaining = MAX_NULL_SCHEMA_NODES;
+    schema_null_match(schema, root, &mut active_refs, 0, &mut remaining) == Some(true)
+}
+
+fn intersect_null_matches(left: Option<bool>, right: Option<bool>) -> Option<bool> {
+    match (left, right) {
+        (Some(false), _) | (_, Some(false)) => Some(false),
+        (Some(true), Some(true)) => Some(true),
+        _ => None,
+    }
+}
+
+pub(super) fn has_unsupported_schema_ref_scope(schema: &Value) -> bool {
+    ["$id", "$dynamicRef", "$recursiveRef"]
+        .iter()
+        .any(|keyword| schema.get(*keyword).and_then(Value::as_str).is_some())
+}
+
+pub(super) fn resolve_local_schema_ref<'a>(reference: &str, root: &'a Value) -> Option<&'a Value> {
+    // URI percent-decoding precedes JSON Pointer's ~0/~1 decoding.
+    let pointer = reference.strip_prefix('#')?;
+    let decoded;
+    let pointer = if pointer.contains('%') {
+        let mut bytes = pointer.bytes();
+        let mut result = Vec::with_capacity(pointer.len());
+        while let Some(byte) = bytes.next() {
+            result.push(if byte == b'%' {
+                let high = char::from(bytes.next()?).to_digit(16)?;
+                let low = char::from(bytes.next()?).to_digit(16)?;
+                ((high << 4) | low) as u8
+            } else {
+                byte
+            });
+        }
+        decoded = String::from_utf8(result).ok()?;
+        decoded.as_str()
+    } else {
+        pointer
+    };
+    let mut bytes = pointer.bytes();
+    while let Some(byte) = bytes.next() {
+        if byte == b'~' && !matches!(bytes.next(), Some(b'0' | b'1')) {
+            return None;
+        }
+    }
+    // A nested $id changes the reference scope. Do not jump through it while
+    // resolving a fragment against the original tool-parameter document.
+    for (end, _) in pointer.char_indices().filter(|(_, ch)| *ch == '/').skip(1) {
+        if has_unsupported_schema_ref_scope(root.pointer(&pointer[..end])?) {
+            return None;
+        }
+    }
+    let target = root.pointer(pointer)?;
+    matches!(target, Value::Bool(_) | Value::Object(_)).then_some(target)
+}
+
+// Evaluate only the constraints relevant to null. Ref targets and sibling
+// keywords intersect; the remaining coercion rules do not change.
+fn schema_null_match<'a>(
+    schema: &'a Value,
+    root: &'a Value,
+    active_refs: &mut Vec<&'a Value>,
+    ref_depth: usize,
+    remaining: &mut usize,
+) -> Option<bool> {
+    *remaining = (*remaining).checked_sub(1)?;
+    if let Some(allowed) = schema.as_bool() {
+        return Some(allowed);
+    }
+    if !schema.is_object()
+        || schema.get("$dynamicRef").is_some()
+        || schema.get("$recursiveRef").is_some()
+        || (schema.get("$id").is_some() && !std::ptr::eq(schema, root))
+    {
+        return None;
+    }
+    let mut permits = Some(true);
+    if let Some(reference) = schema.get("$ref") {
+        let target = reference
+            .as_str()
+            .and_then(|reference| resolve_local_schema_ref(reference, root));
+        permits = if let Some(target) = target
+            && ref_depth < MAX_NULL_SCHEMA_REF_DEPTH
+            && !active_refs
+                .iter()
+                .any(|active| std::ptr::eq(*active, target))
+        {
+            active_refs.push(target);
+            let result = schema_null_match(target, root, active_refs, ref_depth + 1, remaining);
+            active_refs.pop();
+            result
+        } else {
+            None
+        };
+    }
+    if let Some(ty) = schema.get("type") {
+        let nullable = schema.get("nullable").and_then(Value::as_bool) == Some(true);
+        if !nullable
+            && ty.as_str() != Some("null")
+            && !ty
+                .as_array()
+                .is_some_and(|types| types.iter().any(|ty| ty == "null"))
+        {
+            return Some(false);
+        }
+    }
+    if schema.get("const").is_some_and(|value| !value.is_null())
+        || schema
+            .get("enum")
+            .and_then(Value::as_array)
+            .is_some_and(|values| !values.iter().any(Value::is_null))
+    {
+        return Some(false);
+    }
+    for keyword in ["allOf", "anyOf", "oneOf"] {
+        if let Some(branches) = schema.get(keyword).and_then(Value::as_array) {
+            let mut matches = 0;
+            let mut unknown = 0;
+            for branch in branches {
+                match schema_null_match(branch, root, active_refs, ref_depth, remaining) {
+                    Some(true) => matches += 1,
+                    Some(false) => {}
+                    None => unknown += 1,
+                }
+            }
+            let branch_match = match keyword {
+                "allOf" if matches + unknown < branches.len() => Some(false),
+                "anyOf" if matches > 0 => Some(true),
+                "oneOf" if matches > 1 => Some(false),
+                _ if unknown > 0 => None,
+                "allOf" => Some(true),
+                "anyOf" => Some(false),
+                _ => Some(matches == 1),
+            };
+            permits = intersect_null_matches(permits, branch_match);
+            if permits == Some(false) {
+                return permits;
+            }
+        }
+    }
+    if let Some(not) = schema.get("not") {
+        let not_match = schema_null_match(not, root, active_refs, ref_depth, remaining);
+        permits = intersect_null_matches(permits, not_match.map(|matches| !matches));
+    }
+    permits
+}
+
+fn schema_has_type(root: &Value, schema: &Value, expected: &str, raw: &str) -> bool {
+    let mut remaining = 1024;
+    let matched = schema_type_match(root, schema, expected, raw, 0, &mut remaining);
+    remaining > 0 && matched == Some(true)
+}
+
+// None means no type hint: e.g. minLength alone must not exclude an allOf sibling's type.
+fn schema_type_match(
+    root: &Value,
+    schema: &Value,
+    expected: &str,
+    raw: &str,
+    depth: usize,
+    remaining: &mut usize,
+) -> Option<bool> {
+    // A branching reference cycle can expand exponentially even at bounded depth.
+    *remaining = remaining.checked_sub(1)?;
+    // Local references are common in strict tool schemas. Limit traversal so a
+    // cyclic definition cannot recurse indefinitely while deciding a type hint.
+    if depth > 16
+        || schema.get("$dynamicRef").is_some()
+        || schema.get("$recursiveRef").is_some()
+        || (schema.get("$id").is_some() && !std::ptr::eq(schema, root))
+    {
+        return None;
+    }
+    let reference_hint = schema
+        .get("$ref")
+        .and_then(Value::as_str)
+        .and_then(|reference| resolve_local_schema_ref(reference, root))
+        .and_then(|target| schema_type_match(root, target, expected, raw, depth + 1, remaining));
+    let matches = |ty: &Value| {
+        ty.as_str() == Some(expected) || (expected == "integer" && ty.as_str() == Some("number"))
+    };
+    let mut hint = schema.get("type").map(|ty| {
+        ty.as_array()
+            .map_or_else(|| matches(ty), |types| types.iter().any(matches))
+    });
+    // A string constant preserves literal XML text only when this value
+    // matches it. Otherwise a union's numeric/structured alternative must
+    // remain available. Intersect with types, refs, and composition siblings.
+    if expected == "string"
+        && let Some(value) = schema.get("const")
+    {
+        hint = Some(hint.unwrap_or(true) && value.as_str() == Some(raw));
+    }
+    // Modern JSON Schema applies $ref siblings as additional constraints.
+    hint = match (hint, reference_hint) {
+        (Some(left), Some(right)) => Some(left && right),
+        (left, right) => left.or(right),
+    };
+    for keyword in ["anyOf", "oneOf", "allOf"] {
+        let Some(options) = schema.get(keyword).and_then(Value::as_array) else {
+            continue;
+        };
+        let branches = options
+            .iter()
+            .map(|option| schema_type_match(root, option, expected, raw, depth, remaining));
+        let branch_hint = if keyword == "allOf" {
+            branches.flatten().reduce(|left, right| left && right)
+        } else {
+            branches
+                .reduce(|left, right| match (left, right) {
+                    (Some(true), _) | (_, Some(true)) => Some(true),
+                    (Some(false), Some(false)) => Some(false),
+                    _ => None,
+                })
+                .flatten()
+        };
+        hint = match (hint, branch_hint) {
+            (Some(left), Some(right)) => Some(left && right),
+            (left, right) => left.or(right),
+        };
+    }
+    hint
+}
+
+/// Parse a single GLM-4.7 tool call block
+/// Format: <tool_call>function_name<arg_key>key1</arg_key><arg_value>value1</arg_value>...</tool_call>
+fn parse_tool_call_block(
+    block: &str,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<ToolCallResponse> {
+    // Remove the outer <tool_call> tags
+    let start_token = &config.tool_call_start;
+    // Strip the outer start token. The end token is optional so we can
+    // recover from max_tokens / EOS truncation that drops `</tool_call>`.
+    let invoke = block
+        .strip_prefix(start_token.as_str())
+        .ok_or_else(|| anyhow::anyhow!("Invalid tool call block format"))?;
+    parse_glm47_invoke(invoke, config, tools)
+}
+
+pub fn parse_glm47_invoke(
+    invoke: &str,
+    config: &Glm47ParserConfig,
+    tools: Option<&[ToolDefinition]>,
+) -> anyhow::Result<ToolCallResponse> {
+    let content = invoke
+        .strip_suffix(config.tool_call_end.as_str())
+        .unwrap_or(invoke);
+
+    // Extract function name (everything before first <arg_key> or end)
+    let arg_key_start = &config.arg_key_start;
+    let function_name = if let Some(pos) = content.find(arg_key_start.as_str()) {
+        content[..pos].trim().to_string()
+    } else {
+        // No arguments, just function name
+        content.trim().to_string()
+    };
+
+    if function_name.is_empty() {
+        anyhow::bail!("Empty function name in tool call");
+    }
+
+    // Parse key-value pairs
+    let mut arguments = HashMap::new();
+    let args_section = &content[function_name.len()..];
+
+    // Build regex patterns
+    let arg_key_start_escaped = regex::escape(&config.arg_key_start);
+    let arg_key_end_escaped = regex::escape(&config.arg_key_end);
+    let arg_value_start_escaped = regex::escape(&config.arg_value_start);
+    let arg_value_end_escaped = regex::escape(&config.arg_value_end);
+
+    // Pattern: <arg_key>key</arg_key> whitespace* <arg_value>value(</arg_value> | end-of-block)
+    // The `</arg_value>` close is treated as OPTIONAL. A final value whose close
+    // tag was dropped (mismatched/missing fences — batch case 4.d
+    // `<arg_value>NYC</tool_call>`, whose trailing `</tool_call>` is stripped
+    // before this regex, leaving the value at end-of-block) is recovered by
+    // terminating at `\z` instead of being dropped to empty args. `</arg_value>`
+    // is listed first so a well-formed value (including a multi-line one) still
+    // terminates exactly there; `\z` only applies when the close tag is absent.
+    // (The `regex` crate has no lookahead, so the terminator is a plain
+    // alternation of the close tag and the end-of-text anchor.)
+    // (?s) enables dotall mode so (.*?) matches across newlines — required
+    // because models often emit multi-line content in arg values.
+    let pattern = format!(
+        r"(?s){}([^<]+){}\s*{}(.*?)(?:{}|\z)",
+        arg_key_start_escaped, arg_key_end_escaped, arg_value_start_escaped, arg_value_end_escaped
+    );
+
+    let regex = Regex::new(&pattern)?;
+
+    for cap in regex.captures_iter(args_section) {
+        let key = cap.get(1).map(|m| m.as_str().trim()).unwrap_or("");
+        let raw_value = cap.get(2).map(|m| m.as_str()).unwrap_or("");
+
+        if !key.is_empty() {
+            // Look up the expected type from the tool's parameter schema
+            let schema_type = get_param_schema_type(tools, &function_name, key, raw_value);
+            let json_value = coerce_value(raw_value, schema_type);
+
+            arguments.insert(key.to_string(), json_value);
+        }
+    }
+
+    // A tool call for a function not in the request's tools list is still
+    // emitted, not dropped. The parser's job is to extract what the model
+    // produced; validation/rejection belongs to the serving layer. The model
+    // may legitimately reference a tool the caller adds later, or one baked into
+    // its chat template, and dropping it silently hides a real call. This
+    // matches vLLM (which passes the call through) and the other Dynamo parsers
+    // (kimi_k2 / xml / gemma4 already warn-and-pass-through here). We log for
+    // visibility only.
+    if let Some(tools_list) = tools
+        && !tools_list.iter().any(|t| t.name == function_name)
+    {
+        warn!(
+            function = %function_name,
+            why = "tool_not_in_request_tool_list",
+            "GLM-4.7 tool call references a function not in the request's tools list; \
+             passing it through (serving layer validates)"
+        );
+    }
+
+    Ok(ToolCallResponse {
+        id: Uuid::new_v4().to_string(),
+        tp: ToolCallType::Function,
+        function: CalledFunction {
+            name: function_name,
+            arguments: serde_json::to_string(&arguments)?,
+        },
+    })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn get_test_config() -> Glm47ParserConfig {
+        Glm47ParserConfig::default()
+    }
+
+    fn parse_schema_value(parameter: Value, raw: &str) -> Value {
+        let tools = vec![ToolDefinition {
+            name: "probe".into(),
+            parameters: Some(serde_json::json!({
+                "type": "object", "properties": {"value": parameter}
+            })),
+        }];
+        let wire = format!(
+            "<tool_call>probe<arg_key>value</arg_key><arg_value>{raw}</arg_value></tool_call>"
+        );
+        let (calls, _) =
+            try_tool_call_parse_glm47(&wire, &get_test_config(), Some(&tools)).unwrap();
+        assert_eq!(calls.len(), 1);
+        let arguments: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+        arguments["value"].clone()
+    }
+
+    #[test]
+    fn string_constant_unions_select_matching_values() {
+        for keyword in ["anyOf", "oneOf"] {
+            for reverse in [false, true] {
+                for (kind, raw, expected) in [
+                    ("integer", "42", serde_json::json!(42)),
+                    ("integer", "-7", serde_json::json!(-7)),
+                    ("number", "3.5", serde_json::json!(3.5)),
+                    ("boolean", "true", serde_json::json!(true)),
+                    ("object", "{\"x\":1}", serde_json::json!({"x": 1})),
+                    ("array", "[1,2]", serde_json::json!([1, 2])),
+                    ("null", "null", serde_json::json!(null)),
+                ] {
+                    let mut branches = vec![
+                        serde_json::json!({"const": "auto"}),
+                        serde_json::json!({"type": kind}),
+                    ];
+                    if reverse {
+                        branches.reverse();
+                    }
+                    let parameter = serde_json::json!({keyword: branches});
+                    assert_eq!(
+                        parse_schema_value(parameter.clone(), raw),
+                        expected,
+                        "{keyword}, reverse={reverse}, kind={kind}, raw={raw}"
+                    );
+                    assert_eq!(
+                        parse_schema_value(parameter, "auto"),
+                        serde_json::json!("auto"),
+                        "{keyword}, reverse={reverse}, kind={kind}, string branch"
+                    );
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn string_constants_preserve_literal_text() {
+        for raw in [
+            "auto",
+            "\"hello\"",
+            "{\"x\":1}",
+            "[1,2]",
+            "42",
+            "\n42\t",
+            "null",
+        ] {
+            for parameter in [
+                serde_json::json!({"const": raw}),
+                serde_json::json!({"anyOf": [{"const": raw}, {"type": "integer"}]}),
+                serde_json::json!({"allOf": [{"const": raw}, {"minLength": 1}]}),
+            ] {
+                assert_eq!(
+                    parse_schema_value(parameter.clone(), raw),
+                    serde_json::json!(raw),
+                    "schema={parameter}, raw={raw:?}"
+                );
+            }
+        }
+        assert_eq!(
+            parse_schema_value(
+                serde_json::json!({"anyOf": [{"const": "42"}, {"type": "integer"}]}),
+                " 42 "
+            ),
+            serde_json::json!(42),
+            "a string constant must match raw text, not its trimmed spelling"
+        );
+    }
+
+    #[test]
+    fn string_constant_hints_follow_refs_and_intersect_constraints() {
+        let schema = serde_json::json!({
+            "$defs": {
+                "Literal": {"const": "\"hello\""},
+                "Alias": {"$ref": "#/$defs/Literal"},
+                "a/b~c": {"const": "\"hello\""},
+                "Integer": {"type": "integer"},
+                "Choice": {"anyOf": [{"const": "auto"}, {"type": "integer"}]}
+            }
+        });
+        for (parameter, raw, expected) in [
+            (
+                serde_json::json!({"$ref": "#/$defs/Alias"}),
+                "\"hello\"",
+                true,
+            ),
+            (
+                serde_json::json!({"$ref": "#/$defs/a~1b~0c"}),
+                "\"hello\"",
+                true,
+            ),
+            (
+                serde_json::json!({"$ref": "#/$defs/Alias", "type": "integer"}),
+                "\"hello\"",
+                false,
+            ),
+            (
+                serde_json::json!({"$ref": "#/$defs/Integer", "const": "42"}),
+                "42",
+                false,
+            ),
+            (
+                serde_json::json!({"type": "integer", "const": "42"}),
+                "42",
+                false,
+            ),
+            (
+                serde_json::json!({"allOf": [{"const": "42"}, {"type": "integer"}]}),
+                "42",
+                false,
+            ),
+            (
+                serde_json::json!({"allOf": [{"$ref": "#/$defs/Literal"}, {"type": "string"}]}),
+                "\"hello\"",
+                true,
+            ),
+            (
+                serde_json::json!({"allOf": [{"$ref": "#/$defs/Choice"}, {"minimum": 0}]}),
+                "42",
+                false,
+            ),
+            (serde_json::json!({"$ref": "#/$defs/Choice"}), "auto", true),
+            (serde_json::json!({"$ref": "#/$defs/Choice"}), "42", false),
+        ] {
+            assert_eq!(
+                schema_has_type(&schema, &parameter, "string", raw),
+                expected,
+                "schema={parameter}, raw={raw:?}"
+            );
+        }
+    }
+
+    #[test]
+    fn string_constant_unions_keep_existing_ambiguity_rules() {
+        for (parameter, raw, expected) in [
+            (
+                serde_json::json!({"anyOf": [{"type": "string"}, {"type": "integer"}]}),
+                "42",
+                serde_json::json!("42"),
+            ),
+            (
+                serde_json::json!({"anyOf": [{"const": "42"}, {"type": "integer"}]}),
+                "42",
+                serde_json::json!("42"),
+            ),
+            (
+                serde_json::json!({"anyOf": [{"const": "null"}, {"type": "null"}]}),
+                "null",
+                serde_json::json!(null),
+            ),
+            (
+                serde_json::json!({"const": "null"}),
+                "null",
+                serde_json::json!("null"),
+            ),
+            (
+                serde_json::json!({"type": ["string", "null"], "const": "null"}),
+                "null",
+                serde_json::json!("null"),
+            ),
+            (
+                serde_json::json!({"type": "string", "enum": ["\"hello\""]}),
+                "\"hello\"",
+                serde_json::json!("\"hello\""),
+            ),
+        ] {
+            assert_eq!(
+                parse_schema_value(parameter.clone(), raw),
+                expected,
+                "schema={parameter}, raw={raw:?}"
+            );
+        }
+    }
+
+    #[test]
+    fn inline_unions_preserve_string_hints_within_node_budget() {
+        let mut parameter = serde_json::json!({"type": "string"});
+        for keyword in ["anyOf", "oneOf", "allOf"].into_iter().cycle().take(16) {
+            parameter = serde_json::json!({keyword: [parameter]});
+        }
+        let tools = vec![ToolDefinition {
+            name: "set_label".into(),
+            parameters: Some(null_ref_parameters(parameter)),
+        }];
+        let wire = "<tool_call>set_label<arg_key>label</arg_key><arg_value>{\"x\":1}</arg_value></tool_call>";
+        let (calls, _) = try_tool_call_parse_glm47(wire, &get_test_config(), Some(&tools)).unwrap();
+        let arguments: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+        assert_eq!(arguments["label"], serde_json::json!("{\"x\":1}"));
+    }
+
+    #[test]
+    fn type_hints_bound_reference_depth() {
+        for (references, expected) in [(16, serde_json::json!(42)), (17, serde_json::json!("42"))] {
+            let mut definitions = serde_json::Map::new();
+            for index in 0..references {
+                definitions.insert(
+                    format!("step_{index}"),
+                    if index + 1 == references {
+                        serde_json::json!({"type": "integer"})
+                    } else {
+                        serde_json::json!({"$ref": format!("#/$defs/step_{}", index + 1)})
+                    },
+                );
+            }
+            let tools = vec![ToolDefinition {
+                name: "set_label".into(),
+                parameters: Some(serde_json::json!({
+                    "type": "object", "properties": {"label": {"$ref": "#/$defs/step_0"}},
+                    "$defs": definitions
+                })),
+            }];
+            let wire =
+                "<tool_call>set_label<arg_key>label</arg_key><arg_value>42</arg_value></tool_call>";
+            let (calls, _) =
+                try_tool_call_parse_glm47(wire, &get_test_config(), Some(&tools)).unwrap();
+            let arguments: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+            assert_eq!(arguments["label"], expected, "{references} references");
+        }
+    }
+
+    #[test]
+    fn branching_reference_cycles_exhaust_a_shared_budget() {
+        let reference = serde_json::json!({"$ref": "#/$defs/Cycle"});
+        let schema = serde_json::json!({
+            "$defs": {"Cycle": {"anyOf": vec![reference.clone(); 8]}},
+            "properties": {"value": reference}
+        });
+        let mut remaining = 64;
+        assert_eq!(
+            schema_type_match(
+                &schema,
+                &schema["properties"]["value"],
+                "string",
+                "value",
+                0,
+                &mut remaining
+            ),
+            None
+        );
+        assert_eq!(remaining, 0);
+    }
+
+    #[test]
+    fn referenced_types_intersect_siblings_and_bound_cycles() {
+        let schema = serde_json::json!({
+            "$defs": {
+                "Scalar": {"type": ["string", "integer"]},
+                "postal code": {"type": "integer"},
+                "café+": {"type": "integer"},
+                "a/b~c": {"type": "integer"},
+                "Text": {"type": "string"},
+                "Nullable": {"type": ["string", "null"]},
+                "Numbers": {"type": ["integer", "number"]},
+                "NumbersReverse": {"type": ["number", "integer"]},
+                "NumberOrBoolean": {"anyOf": [{"type": "number"}, {"type": "boolean"}]},
+                "Alias": {"$ref": "#/$defs/postal%20code"},
+                "Scoped": {
+                    "$id": "https://example.com/scoped",
+                    "$defs": {"postal code": {"type": "string"}},
+                    "$ref": "#/$defs/postal%20code"
+                },
+                "Dynamic": {"$dynamicRef": "#/$defs/postal%20code"},
+                "Recursive": {"$recursiveRef": "#"},
+                "Loop": {"$ref": "#/$defs/Loop"}
+            },
+            "properties": {
+                "narrow": {"$ref": "#/$defs/Scalar", "type": "integer"},
+                "encoded": {"$ref": "#/$defs/postal%20code"},
+                "utf8": {"$ref": "#/$defs/caf%c3%a9+"},
+                "invalid_utf8": {"$ref": "#/$defs/%FF"},
+                "incomplete": {"$ref": "#/$defs/%2"},
+                "invalid_hex": {"$ref": "#/$defs/%GG"},
+                "escaped": {"$ref": "#/$defs/a%7E1b%7E0c"},
+                "cycle": {"$ref": "#/$defs/Loop"},
+                "typed_cycle": {"$ref": "#/$defs/Loop", "type": "integer"},
+                "payload": {"$ref": "#/$defs/Text"},
+                "nullable": {"$ref": "#/$defs/Nullable"},
+                "literal_null": {"$ref": "#/$defs/Text"},
+                "integer_first": {"$ref": "#/$defs/Numbers"},
+                "number_first": {"$ref": "#/$defs/NumbersReverse"},
+                "bool_union": {"$ref": "#/$defs/NumberOrBoolean"},
+                "allof_narrow": {"$ref": "#/$defs/Scalar", "allOf": [{"type": "integer"}]},
+                "chain": {"$ref": "#/$defs/Alias"},
+                "scoped": {"$ref": "#/$defs/Scoped"},
+                "dynamic": {"$ref": "#/$defs/Dynamic"},
+                "recursive": {"$ref": "#/$defs/Recursive"}
+            }
+        });
+        for (field, raw, expected) in [
+            ("narrow", "42", serde_json::json!(42)),
+            ("encoded", "42", serde_json::json!(42)),
+            ("utf8", "42", serde_json::json!(42)),
+            ("invalid_utf8", "42", serde_json::json!("42")),
+            ("incomplete", "42", serde_json::json!("42")),
+            ("invalid_hex", "42", serde_json::json!("42")),
+            ("escaped", "42", serde_json::json!(42)),
+            ("cycle", "42", serde_json::json!("42")),
+            ("typed_cycle", "42", serde_json::json!(42)),
+            ("payload", "{\"x\":1}", serde_json::json!("{\"x\":1}")),
+            ("nullable", "null", serde_json::json!(null)),
+            ("literal_null", "null", serde_json::json!("null")),
+            ("integer_first", "3.5", serde_json::json!(3.5)),
+            ("number_first", "42", serde_json::json!(42)),
+            ("bool_union", "true", serde_json::json!(true)),
+            ("allof_narrow", "42", serde_json::json!(42)),
+            ("chain", "42", serde_json::json!(42)),
+            ("scoped", "42", serde_json::json!("42")),
+            ("dynamic", "42", serde_json::json!("42")),
+            ("recursive", "42", serde_json::json!("42")),
+        ] {
+            let tools = vec![ToolDefinition {
+                name: "capture_payload".into(),
+                parameters: Some(schema.clone()),
+            }];
+            let input = format!(
+                "<tool_call>capture_payload<arg_key>{field}</arg_key><arg_value>{raw}</arg_value></tool_call>"
+            );
+            let (calls, _) =
+                try_tool_call_parse_glm47(&input, &get_test_config(), Some(&tools)).unwrap();
+            let args: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+            assert_eq!(args[field], expected, "{field}");
+        }
+    }
+
+    fn parse_null_with_parameters(parameters: Value) -> Value {
+        let tools = vec![ToolDefinition {
+            name: "set_label".into(),
+            parameters: Some(parameters),
+        }];
+        let wire =
+            "<tool_call>set_label<arg_key>label</arg_key><arg_value>null</arg_value></tool_call>";
+        let (calls, _) = try_tool_call_parse_glm47(wire, &get_test_config(), Some(&tools)).unwrap();
+        assert_eq!(calls.len(), 1);
+        let arguments: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+        arguments["label"].clone()
+    }
+
+    fn null_ref_parameters(parameter: Value) -> Value {
+        serde_json::json!({
+            "type": "object",
+            "properties": {"label": parameter, "other": {"type": "string"}},
+            "$defs": {
+                "String": {"type": "string"},
+                "Nullable": {"type": ["string", "null"]},
+                "Alias": {"$ref": "#/$defs/Nullable"},
+                "True": true,
+                "False": false,
+                "CycleA": {"$ref": "#/$defs/CycleB"},
+                "CycleB": {"$ref": "#/$defs/CycleA"},
+                "Slash/Tilde~": {"type": "string"},
+                "café name": {"type": "string"},
+                "Bad~2": {"type": ["string", "null"]},
+                "NotSchema": null,
+                "Scoped": {
+                    "$id": "nested",
+                    "$defs": {"Label": {"type": ["string", "null"]}}
+                }
+            },
+            "definitions": {"String": {"type": "string"}}
+        })
+    }
+
+    #[test]
+    fn null_coercion_resolves_local_refs() {
+        for (label, parameter, permits_null) in [
+            (
+                "string",
+                serde_json::json!({"$ref": "#/$defs/String"}),
+                false,
+            ),
+            (
+                "nullable",
+                serde_json::json!({"$ref": "#/$defs/Nullable"}),
+                true,
+            ),
+            ("chain", serde_json::json!({"$ref": "#/$defs/Alias"}), true),
+            (
+                "definitions",
+                serde_json::json!({"$ref": "#/definitions/String"}),
+                false,
+            ),
+            (
+                "property",
+                serde_json::json!({"$ref": "#/properties/other"}),
+                false,
+            ),
+            ("root", serde_json::json!({"$ref": "#"}), false),
+            ("true", serde_json::json!({"$ref": "#/$defs/True"}), true),
+            ("false", serde_json::json!({"$ref": "#/$defs/False"}), false),
+            (
+                "escaped",
+                serde_json::json!({"$ref": "#/$defs/Slash~1Tilde~0"}),
+                false,
+            ),
+            (
+                "percent_encoded",
+                serde_json::json!({"$ref": "#/$defs/caf%C3%A9%20name"}),
+                false,
+            ),
+            (
+                "encoded_escapes",
+                serde_json::json!({"$ref": "#/$defs/Slash%7E1Tilde%7E0"}),
+                false,
+            ),
+            (
+                "sibling_type",
+                serde_json::json!({"$ref": "#/$defs/Nullable", "type": "string"}),
+                false,
+            ),
+            (
+                "sibling_enum",
+                serde_json::json!({"$ref": "#/$defs/Nullable", "enum": ["null"]}),
+                false,
+            ),
+            (
+                "sibling_const",
+                serde_json::json!({"$ref": "#/$defs/Nullable", "const": "null"}),
+                false,
+            ),
+            (
+                "sibling_not",
+                serde_json::json!({"$ref": "#/$defs/Nullable", "not": {"type": "null"}}),
+                false,
+            ),
+            (
+                "allof",
+                serde_json::json!({"allOf": [{"$ref": "#/$defs/Nullable"}, {"$ref": "#/$defs/String"}]}),
+                false,
+            ),
+            (
+                "anyof",
+                serde_json::json!({"anyOf": [{"$ref": "#/$defs/String"}, {"type": "null"}]}),
+                true,
+            ),
+            (
+                "oneof",
+                serde_json::json!({"oneOf": [{"$ref": "#/$defs/String"}, {"$ref": "#/$defs/Nullable"}]}),
+                true,
+            ),
+            (
+                "not_string",
+                serde_json::json!({"not": {"$ref": "#/$defs/String"}}),
+                true,
+            ),
+            (
+                "repeated_ref_anyof",
+                serde_json::json!({"anyOf": [{"$ref": "#/$defs/Nullable"}, {"$ref": "#/$defs/Nullable"}]}),
+                true,
+            ),
+            (
+                "repeated_ref_oneof",
+                serde_json::json!({"oneOf": [{"$ref": "#/$defs/Nullable"}, {"$ref": "#/$defs/Nullable"}]}),
+                false,
+            ),
+        ] {
+            let expected = if permits_null {
+                Value::Null
+            } else {
+                serde_json::json!("null")
+            };
+            assert_eq!(
+                parse_null_with_parameters(null_ref_parameters(parameter)),
+                expected,
+                "{label}"
+            );
+        }
+        let mut root_with_id = null_ref_parameters(serde_json::json!({"$ref": "#/$defs/Nullable"}));
+        root_with_id["$id"] = serde_json::json!("https://example.com/parameters");
+        assert_eq!(parse_null_with_parameters(root_with_id), Value::Null);
+    }
+
+    #[test]
+    fn null_coercion_schema_map_names_are_not_scopes() {
+        for keyword in ["$id", "$dynamicRef", "$recursiveRef"] {
+            for definition in [
+                serde_json::json!({"type": "string"}),
+                serde_json::json!(true),
+            ] {
+                let mut parameters =
+                    null_ref_parameters(serde_json::json!({"$ref": "#/$defs/Nullable"}));
+                parameters["$defs"][keyword] = definition;
+                assert_eq!(
+                    parse_null_with_parameters(parameters),
+                    Value::Null,
+                    "{keyword}"
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn null_coercion_preserves_unknown_refs() {
+        for reference in [
+            "#/$defs/Missing",
+            "https://example.com/schema",
+            "#anchor",
+            "#/$defs/Bad~2",
+            "#/$defs/Nullable%",
+            "#/$defs/Nullable%GG",
+            "#/$defs/%FF",
+            "#/$defs/NotSchema",
+            "#/$defs/CycleA",
+            "#/properties/label",
+            "#/$defs/Scoped/$defs/Label",
+        ] {
+            for parameter in [
+                serde_json::json!({"$ref": reference}),
+                serde_json::json!({"not": {"$ref": reference}}),
+                serde_json::json!({"oneOf": [{"type": "null"}, {"$ref": reference}]}),
+            ] {
+                assert_eq!(
+                    parse_null_with_parameters(null_ref_parameters(parameter.clone())),
+                    serde_json::json!("null"),
+                    "{parameter}"
+                );
+            }
+        }
+        for parameter in [
+            serde_json::json!({"$ref": 42}),
+            serde_json::json!({"$id": "nested", "$ref": "#/$defs/Nullable"}),
+            serde_json::json!({"$dynamicRef": "#/$defs/Nullable"}),
+            serde_json::json!({"$recursiveRef": "#"}),
+        ] {
+            assert_eq!(
+                parse_null_with_parameters(null_ref_parameters(parameter.clone())),
+                serde_json::json!("null"),
+                "{parameter}"
+            );
+        }
+    }
+
+    #[test]
+    fn null_coercion_combines_unknown_ref_branches() {
+        for (parameter, permits_null) in [
+            (
+                serde_json::json!({"anyOf": [{"type": "null"}, {"$ref": "#/$defs/Missing"}]}),
+                true,
+            ),
+            (
+                serde_json::json!({"allOf": [{"type": "null"}, {"$ref": "#/$defs/Missing"}]}),
+                false,
+            ),
+            (
+                serde_json::json!({"oneOf": [{"type": "null"}, {"$ref": "#/$defs/Missing"}]}),
+                false,
+            ),
+            (
+                serde_json::json!({"not": {"allOf": [{"type": "string"}, {"$ref": "#/$defs/Missing"}]}}),
+                true,
+            ),
+            (
+                serde_json::json!({"not": {"anyOf": [{"type": "string"}, {"$ref": "#/$defs/Missing"}]}}),
+                false,
+            ),
+            (
+                serde_json::json!({"not": {"oneOf": [{"type": "null"}, {"type": "null"}, {"$ref": "#/$defs/Missing"}]}}),
+                true,
+            ),
+        ] {
+            let expected = if permits_null {
+                Value::Null
+            } else {
+                serde_json::json!("null")
+            };
+            assert_eq!(
+                parse_null_with_parameters(null_ref_parameters(parameter.clone())),
+                expected,
+                "{parameter}"
+            );
+        }
+    }
+
+    #[test]
+    fn null_coercion_bounds_reference_expansion() {
+        for (references, expected) in [(16, Value::Null), (17, serde_json::json!("null"))] {
+            let mut definitions = serde_json::Map::new();
+            for index in 0..references {
+                definitions.insert(
+                    format!("step_{index}"),
+                    if index + 1 == references {
+                        serde_json::json!({"type": "null"})
+                    } else {
+                        serde_json::json!({"$ref": format!("#/$defs/step_{}", index + 1)})
+                    },
+                );
+            }
+            let parameters = serde_json::json!({
+                "type": "object", "properties": {"label": {"$ref": "#/$defs/step_0"}},
+                "$defs": definitions
+            });
+            assert_eq!(
+                parse_null_with_parameters(parameters),
+                expected,
+                "{references} references"
+            );
+        }
+        let parameter =
+            serde_json::json!({"allOf": vec![serde_json::json!({"type": "null"}); 4096]});
+        assert_eq!(
+            parse_null_with_parameters(null_ref_parameters(parameter)),
+            serde_json::json!("null")
+        );
+    }
+
+    #[test]
+    fn nullable_string_union_preserves_json_null() {
+        let tools = vec![ToolDefinition {
+            name: "set_labels".to_string(),
+            parameters: Some(serde_json::json!({
+                "type": "object",
+                "properties": {
+                    "label": {"anyOf": [{"type": "string"}, {"type": "null"}]},
+                    "note": {"type": ["string", "null"]},
+                    "literal": {"type": "string"}
+                }
+            })),
+        }];
+        let message = concat!(
+            "<tool_call>set_labels",
+            "<arg_key>label</arg_key><arg_value>null</arg_value>",
+            "<arg_key>note</arg_key><arg_value>null</arg_value>",
+            "<arg_key>literal</arg_key><arg_value>null</arg_value>",
+            "</tool_call>"
+        );
+        let (calls, _) =
+            try_tool_call_parse_glm47(message, &get_test_config(), Some(&tools)).unwrap();
+        assert_eq!(calls.len(), 1);
+        let args: Value = serde_json::from_str(&calls[0].function.arguments).unwrap();
+        assert_eq!(
+            args,
+            serde_json::json!({"label": null, "note": null, "literal": "null"})
+        );
+    }
+
+    #[test]
+    fn test_string_schema_keeps_json_looking_values_verbatim() {
+        for param_schema in [
+            serde_json::json!({"type": "string"}),
+            serde_json::json!({"type": ["string"]}),
+            serde_json::json!({"type": ["string", "null"]}),
+            serde_json::json!({"type": ["null", "string"]}),
+            serde_json::json!({"type": ["object", "array", "string"]}),
+            serde_json::json!({"anyOf": [{"type": "string"}, {"type": "null"}]}),
+            serde_json::json!({"oneOf": [{"type": "null"}, {"type": "string"}]}),
+            serde_json::json!({"allOf": [{"type": "string"}]}),
+            serde_json::json!({"allOf": [{"minLength": 1}, {"type": "string"}]}),
+            serde_json::json!({"allOf": [
+                {"anyOf": [
+                    {"type": "null"},
+                    {"oneOf": [{"type": "array"}, {"type": "string"}]}
+                ]},
+                {"minLength": 1}
+            ]}),
+            serde_json::json!({"oneOf": [
+                {"type": "null"}, {"allOf": [{"type": "string"}, {"minLength": 1}]}
+            ]}),
+            serde_json::json!({"anyOf": [
+                {"type": "object"},
+                {"oneOf": [{"type": "array"}, {"type": ["null", "string"]}]}
+            ]}),
+        ] {
+            let config = get_test_config();
+            let tools = vec![ToolDefinition {
+                name: "save_note".to_string(),
+                parameters: Some(serde_json::json!({
+                    "type": "object",
+                    "properties": {
+                        "object_text": param_schema,
+                        "array_text": param_schema,
+                        "quoted_text": param_schema,
+                        "payload": {"type": "object"},
+                        "composed_payload": {"allOf": [
+                            {"type": "object"},
+                            {"properties": {"key": {"type": "string"}}}
+                        ]},
+                        "untyped": {}
+                    }
+                })),
+            }];
+
+            let message = concat!(
+                "<tool_call>save_note",
+                "<arg_key>object_text</arg_key><arg_value>{\"key\": \"value\"}</arg_value>",
+                "<arg_key>array_text</arg_key><arg_value>[1, 2, 3]</arg_value>",
+                "<arg_key>quoted_text</arg_key><arg_value>\"quoted\"</arg_value>",
+                "<arg_key>payload</arg_key><arg_value>{\"key\": \"value\"}</arg_value>",
+                "<arg_key>composed_payload</arg_key><arg_value>{\"key\": \"value\"}</arg_value>",
+                "<arg_key>untyped</arg_key><arg_value>[1, 2, 3]</arg_value>",
+                "</tool_call>"
+            );
+
+            let (calls, _) = try_tool_call_parse_glm47(message, &config, Some(&tools)).unwrap();
+            assert_eq!(calls.len(), 1);
+            let args: HashMap<String, Value> =
+                serde_json::from_str(&calls[0].function.arguments).unwrap();
+
+            assert_eq!(
+                args["object_text"],
+                Value::String("{\"key\": \"value\"}".to_string())
+            );
+            assert_eq!(args["array_text"], Value::String("[1, 2, 3]".to_string()));
+            assert_eq!(args["quoted_text"], Value::String("\"quoted\"".to_string()));
+            assert_eq!(args["payload"], serde_json::json!({"key": "value"}));
+            assert_eq!(
+                args["composed_payload"],
+                serde_json::json!({"key": "value"})
+            );
+            assert_eq!(args["untyped"], serde_json::json!([1, 2, 3]));
+        }
+    }
+    #[test]
+    fn null_coercion_respects_full_schema_constraints() {
+        for (label, schema, expected) in [
+            (
+                "7-4",
+                serde_json::json!({"type": ["string", "null"]}),
+                serde_json::json!(null),
+            ),
+            (
+                "7-4.anyof",
+                serde_json::json!({"anyOf": [{"type": "string"}, {"type": "null"}]}),
+                serde_json::json!(null),
+            ),
+            (
+                "7-4.oneof",
+                serde_json::json!({"oneOf": [{"type": "string"}, {"type": "null"}]}),
+                serde_json::json!(null),
+            ),
+            (
+                "7-4.nullable",
+                serde_json::json!({"type": "string", "nullable": true}),
+                serde_json::json!(null),
+            ),
+            (
+                "7-4.const",
+                serde_json::json!({"anyOf": [{"const": null}, {"type": "string"}]}),
+                serde_json::json!(null),
+            ),
+            (
+                "7-5",
+                serde_json::json!({"type": "string"}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.union",
+                serde_json::json!({"anyOf": [{"type": "string"}, {"type": "integer"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.sibling_anyof",
+                serde_json::json!({"type": "string", "anyOf": [{"type": "string"}, {"type": "null"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.sibling_oneof",
+                serde_json::json!({"type": ["string", "null"], "oneOf": [{"type": "string"}, {"type": "integer"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.untyped_branch",
+                serde_json::json!({"type": "string", "anyOf": [{"minLength": 1}, {"type": "null"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.const",
+                serde_json::json!({"anyOf": [{"const": "null"}, {"type": "integer"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "7-5.enum",
+                serde_json::json!({"type": "string", "enum": ["null", null]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "allof_string",
+                serde_json::json!({"allOf": [{"type": ["string", "null"]}, {"type": "string"}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "const_string",
+                serde_json::json!({"const": "null"}),
+                serde_json::json!("null"),
+            ),
+            (
+                "enum_string",
+                serde_json::json!({"enum": ["null"]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "const_null",
+                serde_json::json!({"const": null}),
+                serde_json::json!(null),
+            ),
+            (
+                "enum_null",
+                serde_json::json!({"enum": [null]}),
+                serde_json::json!(null),
+            ),
+            (
+                "const_intersection",
+                serde_json::json!({"type": ["string", "null"], "const": "null"}),
+                serde_json::json!("null"),
+            ),
+            (
+                "oneof_overlap",
+                serde_json::json!({"oneOf": [{"type": "null"}, {}]}),
+                serde_json::json!("null"),
+            ),
+            (
+                "not_null",
+                serde_json::json!({"type": ["string", "null"], "not": {"type": "null"}}),
+                serde_json::json!("null"),
+            ),
+        ] {
+            let tools = vec![ToolDefinition {
+                name: "get_weather".into(),
+                parameters: Some(serde_json::json!({"type":"object","properties":{"city":schema}})),
+            }];
+            let wire = "<tool_call>get_weather<arg_key>city</arg_key><arg_value>null</arg_value></tool_call>";
+            let (calls, _) =
+                try_tool_call_parse_glm47(wire, &get_test_config(), Some(&tools)).unwrap();
+            assert_eq!(calls.len(), 1, "{label}");
+            let args: serde_json::Value =
+                serde_json::from_str(&calls[0].function.arguments).unwrap();
+            assert_eq!(args["city"], expected, "{label}");
+        }
+    }
+}

@@ -1,0 +1,240 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+// SPDX-License-Identifier: Apache-2.0
+
+//! Public structural tag builder API used by the Dynamo preprocessor.
+
+use serde::{Deserialize, Serialize};
+use serde_json::{Value, json};
+
+use crate::tool_calling::{ToolChoice, ToolDefinition};
+
+use super::dsml::{self, DsmlToolCallsConfig};
+use super::format::{
+    AnyTextFormat, AnyTokensFormat, Format, SequenceFormat, StructuralTag, TagFormat,
+};
+use super::glm47;
+use super::kimi_k2;
+use super::kimi_k3;
+use super::triggered_tags::{self, TriggeredTagsConfig};
+
+/// Controls whether tools get their real parameter schema or an
+/// unconstrained one inside structural tags.
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[serde(rename_all = "snake_case")]
+pub enum StructuralTagSchemaMode {
+    /// Use the declared schema unless the tool explicitly sets `strict: false`.
+    /// An omitted `strict` field is schema-enforced; explicit `false` uses an
+    /// unconstrained argument schema (`true` in xgrammar).
+    #[default]
+    Auto,
+    /// Use the declared parameter schema for all tools, overriding
+    /// `strict: false`.
+    Strict,
+}
+
+/// Request-scoped inputs for building a tool-call structural tag.
+#[derive(Debug, Clone, Copy)]
+pub struct ToolCallFormatBuildContext<'a> {
+    /// Resolved `tool_choice` from the request.
+    pub tool_choice: &'a ToolChoice,
+    /// All tools from the request.
+    pub tools: &'a [ToolDefinition],
+    /// From the request; `Some(false)` sets `stop_after_first` in the tag.
+    pub parallel_tool_calls: Option<bool>,
+    /// Schema strictness mode for tool arguments.
+    pub schema_mode: StructuralTagSchemaMode,
+    /// Whether generation starts inside an already-opened reasoning block.
+    pub starts_in_reasoning: bool,
+}
+
+impl ToolCallFormatBuildContext<'_> {
+    /// Whether we should stop after the first matched tool-call tag.
+    pub(crate) fn stop_after_first(&self) -> bool {
+        self.parallel_tool_calls.is_some_and(|v| !v)
+    }
+
+    /// Whether all tools should use their request-provided parameter schema.
+    pub(crate) fn strict_schema(&self) -> bool {
+        self.schema_mode == StructuralTagSchemaMode::Strict
+    }
+}
+
+/// Select tools for `tool_choice` and whether at least one call is required.
+pub(crate) fn resolve_tools_to_include<'a>(
+    ctx: &ToolCallFormatBuildContext<'a>,
+) -> anyhow::Result<(Vec<&'a ToolDefinition>, bool)> {
+    match ctx.tool_choice {
+        ToolChoice::None => Ok((vec![], false)),
+        ToolChoice::Auto => Ok((ctx.tools.iter().collect(), false)),
+        ToolChoice::Required => {
+            anyhow::ensure!(
+                !ctx.tools.is_empty(),
+                "tool_choice is \"required\" but tools is empty"
+            );
+            Ok((ctx.tools.iter().collect(), true))
+        }
+        ToolChoice::Named(name) => {
+            let tool = ctx.tools.iter().find(|t| t.name == *name).ok_or_else(|| {
+                anyhow::anyhow!(
+                    "tool named \"{}\" in tool_choice is not present in tools",
+                    name
+                )
+            })?;
+            Ok((vec![tool], true))
+        }
+    }
+}
+
+/// Whether a tool's declared parameter schema should constrain its arguments.
+///
+/// [`StructuralTagSchemaMode::Auto`] treats an omitted `strict` field as
+/// schema-enforced. Only an explicit `strict: false` opts out. Global strict
+/// mode overrides that per-tool opt-out.
+pub(crate) fn uses_declared_tool_schema(tool: &ToolDefinition, strict_schema: bool) -> bool {
+    strict_schema || tool.strict != Some(false)
+}
+
+/// Resolve one tool's argument schema using Dynamo's generic schema policy.
+pub(crate) fn resolve_tool_schema(tool: &ToolDefinition, strict_schema: bool) -> Value {
+    // xgrammar uses `true` for syntactically valid but schema-unconstrained JSON.
+    let default_schema = json!(true);
+
+    if uses_declared_tool_schema(tool, strict_schema) {
+        tool.parameters.clone().unwrap_or(default_schema)
+    } else {
+        default_schema
+    }
+}
+
+/// Builder for model-family-specific tool-call structural tags.
+#[derive(Debug, Clone)]
+#[non_exhaustive]
+pub enum StructuralTagBuilder {
+    /// Simple `triggered_tags` format with one tag template per tool.
+    TriggeredTags(TriggeredTagsConfig),
+
+    /// DeepSeek DSML format with a `triggered_tags` wrapper and invoke list.
+    DsmlToolCalls(DsmlToolCallsConfig),
+
+    /// Kimi K2's native special-token tool-call section format.
+    ///
+    /// When generation starts in a prompt-injected reasoning block, this
+    /// builder assumes the K2.5/K2.6 `kimi_k25` `</think>` terminator. Original
+    /// K2-Thinking is not supported because its chat template leaves the
+    /// opening `<think>` for the model to generate.
+    KimiK2,
+
+    /// Kimi K3's native XTML response/tools channel format.
+    KimiK3,
+
+    /// GLM-4.7 / GLM-5.x `<tool_call>name<arg_key>..</arg_key><arg_value>..</arg_value></tool_call>`.
+    Glm47,
+}
+
+impl StructuralTagBuilder {
+    /// Build the structural tag for the given request context.
+    ///
+    /// Returns `Ok(None)` when `tool_choice="none"` (use
+    /// [`build_tool_call_ban`](Self::build_tool_call_ban) for that case)
+    /// or when the tools list is empty for `tool_choice="auto"`.
+    ///
+    /// Returns `Err` when the request is invalid (e.g. named tool not found
+    /// in the tools list, or empty tools for `tool_choice="required"`).
+    pub fn build_tool_call_format(
+        &self,
+        ctx: &ToolCallFormatBuildContext<'_>,
+    ) -> anyhow::Result<Option<Value>> {
+        let structural_tag = match self {
+            Self::TriggeredTags(config) => triggered_tags::build_triggered_tags(config, ctx)?,
+            Self::DsmlToolCalls(config) => dsml::build_dsml_tool_calls(config, ctx)?,
+            Self::KimiK2 => kimi_k2::build_kimi_k2(ctx)?,
+            Self::KimiK3 => kimi_k3::build_kimi_k3(ctx)?,
+            // Built as JSON so the public format types stay unchanged.
+            Self::Glm47 => return glm47::build_glm47(ctx),
+        };
+
+        structural_tag
+            .map(|tag| self.wrap_reasoning_prefix_if_needed(ctx, tag))
+            .transpose()?
+            .map(|tag| serde_json::to_value(tag).map_err(Into::into))
+            .transpose()
+    }
+
+    fn wrap_reasoning_prefix_if_needed(
+        &self,
+        ctx: &ToolCallFormatBuildContext<'_>,
+        suffix: StructuralTag,
+    ) -> anyhow::Result<StructuralTag> {
+        // K3's response body excludes XTML controls, so auto also needs to
+        // consume the think-close marker when the grammar owns reasoning.
+        let should_wrap_with_reasoning_tag = ctx.starts_in_reasoning
+            && (matches!(ctx.tool_choice, ToolChoice::Required | ToolChoice::Named(_))
+                || matches!(self, Self::KimiK3));
+        if !should_wrap_with_reasoning_tag {
+            return Ok(suffix);
+        }
+
+        let reasoning_end = self.reasoning_end().ok_or_else(|| {
+            anyhow::anyhow!("reasoning end tag is not configured for structural tag")
+        })?;
+        let reasoning_prefix = Format::Tag(TagFormat {
+            begin: String::new(),
+            content: Box::new(Format::AnyText(AnyTextFormat { excludes: vec![] })),
+            end: reasoning_end.to_string(),
+        });
+
+        Ok(StructuralTag {
+            format: Format::Sequence(SequenceFormat {
+                elements: vec![reasoning_prefix, suffix.format],
+            }),
+        })
+    }
+
+    /// Build a structural tag that prevents tool-call generation for
+    /// `tool_choice="none"`.
+    ///
+    /// Returns `Ok(None)` when no ban tokens are configured.
+    pub fn build_tool_call_ban(&self) -> anyhow::Result<Option<Value>> {
+        let tokens = self.ban_tokens();
+        if tokens.is_empty() {
+            return Ok(None);
+        }
+
+        let content = Format::AnyTokens(AnyTokensFormat {
+            exclude_tokens: tokens.to_vec(),
+        });
+
+        let tag = StructuralTag {
+            format: Format::Tag(TagFormat {
+                begin: String::new(),
+                content: Box::new(content),
+                end: String::new(),
+            }),
+        };
+
+        serde_json::to_value(tag).map(Some).map_err(Into::into)
+    }
+
+    /// Returns the tokens to ban for `tool_choice="none"`.
+    pub fn ban_tokens(&self) -> &[String] {
+        match self {
+            Self::TriggeredTags(config) => &config.tool_call_ban_tokens,
+            Self::DsmlToolCalls(config) => &config.tool_call_ban_tokens,
+            Self::KimiK2 => &[],
+            Self::KimiK3 => &[],
+            Self::Glm47 => glm47::BAN_TOKENS.as_slice(),
+        }
+    }
+
+    fn reasoning_end(&self) -> Option<&str> {
+        match self {
+            Self::TriggeredTags(config) => config.reasoning_end.as_deref(),
+            Self::DsmlToolCalls(config) => config.reasoning_end.as_deref(),
+            // K2.5/K2.6 `kimi_k25` reasoning terminator. Original K2-Thinking
+            // generates the opening `<think>` itself and needs a separate path.
+            Self::KimiK2 => Some("</think>"),
+            Self::KimiK3 => Some("<|close|>think<|sep|>"),
+            Self::Glm47 => Some("</think>"),
+        }
+    }
+}

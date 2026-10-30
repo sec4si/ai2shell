@@ -1,0 +1,28 @@
+{
+  "models": [
+    "DeepSeek-V4",
+    "DeepSeek-V4.1",
+    "Kimi-K2",
+    "Kimi-K3",
+    "Qwen-Coder",
+    "Qwen"
+  ],
+  "dialects": [
+    "v4",
+    "v41",
+    "kimi",
+    "kimi_k3",
+    "qwen_coder",
+    "qwen"
+  ],
+  "operation": "Filtered saved observations only; no parser, model or tool was rerun.",
+  "mixed_inputs": "Out-of-scope mixed inputs were archived, not edited or relabelled.",
+  "removed_counts": {
+    "removed_main_pairs": 10,
+    "removed_foreign_input_main_rows": 70,
+    "removed_mixed_combined_replays": 3,
+    "removed_supplement_case_definitions": 29,
+    "removed_cross_dialect_inputs": 9,
+    "removed_online_experiments": 1
+  }
+}

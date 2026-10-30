@@ -1,0 +1,841 @@
+{
+  "scope": "Saved-record audit only; no parser replay, model, HTTP request or tool execution",
+  "main": {
+    "pairs": 35,
+    "input_rows": 1100,
+    "runs": 5500,
+    "batch_control_passed_pairs": 30,
+    "all_five_controls_passed_pairs": 21,
+    "framework_pair_counts": {
+      "dynamo": 5,
+      "llama_cpp": 4,
+      "lmdeploy": 4,
+      "ollama": 4,
+      "sglang": 6,
+      "tensorrt_llm": 6,
+      "vllm": 6
+    }
+  },
+  "matrix": [
+    {
+      "framework": "dynamo",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "x/x",
+        "x/x",
+        "Y/Y",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "dynamo",
+      "dialect": "kimi_k3",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "dynamo",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/-",
+        "Y/-",
+        "x/-",
+        "Y/-",
+        "x/-"
+      ]
+    },
+    {
+      "framework": "dynamo",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "dynamo",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "llama_cpp",
+      "dialect": "kimi",
+      "batch_control_passed": false,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "batch",
+          "whole"
+        ],
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-"
+      ]
+    },
+    {
+      "framework": "llama_cpp",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/x",
+        "x/x",
+        "x/x",
+        "x/x",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "llama_cpp",
+      "dialect": "qwen_coder",
+      "batch_control_passed": false,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "batch",
+          "whole"
+        ],
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-"
+      ]
+    },
+    {
+      "framework": "llama_cpp",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/x",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "lmdeploy",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "x/x",
+        "x/x",
+        "Y/P",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "lmdeploy",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "x/x",
+        "x/x",
+        "Y/Y",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "lmdeploy",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P"
+      ]
+    },
+    {
+      "framework": "lmdeploy",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P"
+      ]
+    },
+    {
+      "framework": "ollama",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "x/x",
+        "x/x",
+        "Y/Y",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "ollama",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "x/x",
+        "x/x",
+        "Y/Y",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "ollama",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/x",
+        "x/x",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "ollama",
+      "dialect": "v4",
+      "batch_control_passed": false,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "batch",
+          "whole"
+        ],
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/x",
+        "x/P",
+        "x/x",
+        "Y/P",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "kimi_k3",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          "whole"
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "x/x",
+        "x/x",
+        "Y/P",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/x"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "sglang",
+      "dialect": "v41",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/-",
+        "x/-",
+        "x/-",
+        "Y/-",
+        "x/-"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "kimi_k3",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P",
+        "Y/P"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "qwen",
+      "batch_control_passed": true,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "stream",
+          "whole"
+        ]
+      ],
+      "ways_batch_stream": [
+        "Y/P",
+        "x/x",
+        "x/x",
+        "Y/P",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "tensorrt_llm",
+      "dialect": "v41",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "kimi",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "x/x",
+        "Y/Y",
+        "x/x"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "kimi_k3",
+      "batch_control_passed": false,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "batch",
+          "whole"
+        ],
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "qwen",
+      "batch_control_passed": false,
+      "all_five_controls_passed": false,
+      "control_failed_modes": [
+        [
+          "batch",
+          "whole"
+        ],
+        [
+          "stream",
+          "whole"
+        ],
+        [
+          "stream",
+          1
+        ],
+        [
+          "stream",
+          3
+        ],
+        [
+          "stream",
+          13
+        ]
+      ],
+      "ways_batch_stream": [
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-",
+        "-/-"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "qwen_coder",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "x/x",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "v4",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    },
+    {
+      "framework": "vllm",
+      "dialect": "v41",
+      "batch_control_passed": true,
+      "all_five_controls_passed": true,
+      "control_failed_modes": [],
+      "ways_batch_stream": [
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y",
+        "Y/Y"
+      ]
+    }
+  ],
+  "supplements": {
+    "cell_completion": {
+      "inputs": 131,
+      "runs": 1135
+    },
+    "cross_dialect": {
+      "inputs": 12,
+      "runs": 312
+    }
+  },
+  "online": [
+    {
+      "file": "results/deepseek_vllm/e2e_results.json",
+      "model": "deepseek-v4.1-flash-1017",
+      "record_kind": "single_request_probes",
+      "records": 13,
+      "responses": 13,
+      "errors": 0
+    },
+    {
+      "file": "results/online/deepseek-v4.1-flash-1017__bash_id/online_results.json",
+      "model": "deepseek-v4.1-flash-1017",
+      "record_kind": "single_request_probes",
+      "records": 5,
+      "responses": 5,
+      "errors": 0
+    },
+    {
+      "file": "results/online/deepseek-v4.1-flash-1017__dsml_v41/online_results.json",
+      "model": "deepseek-v4.1-flash-1017",
+      "record_kind": "single_request_probes",
+      "records": 7,
+      "responses": 7,
+      "errors": 0
+    },
+    {
+      "file": "results/online/deepseek-v4.1-flash-1017__pentest_dsml_gateway/online_results.json",
+      "model": "deepseek-v4.1-flash-1017",
+      "record_kind": "agent_sessions",
+      "records": 2,
+      "responses": 26,
+      "errors": 0
+    },
+    {
+      "file": "results/online/kimi-k3__kimi_k3/online_results.json",
+      "model": "kimi-k3",
+      "record_kind": "single_request_probes",
+      "records": 7,
+      "responses": 0,
+      "errors": 7
+    },
+    {
+      "file": "results/online/kimi-k3__kimi_k3_anthropic/online_results.json",
+      "model": "kimi-k3",
+      "record_kind": "single_request_probes",
+      "records": 7,
+      "responses": 7,
+      "errors": 0
+    }
+  ],
+  "snapshots": [
+    {
+      "folder": "dynamo",
+      "commit": "3b7af264e456ad87ce7415fa4339636a2734ca0d",
+      "manifest_files": 17,
+      "mismatches": []
+    },
+    {
+      "folder": "llama_cpp",
+      "commit": "3ab37aedfed642213c1878ecb46cb3770a3b50a3",
+      "manifest_files": 1974,
+      "mismatches": []
+    },
+    {
+      "folder": "lmdeploy",
+      "commit": "3f99ed1502ce3f7cf9747afc2138ff624e5d5457",
+      "manifest_files": 47,
+      "mismatches": []
+    },
+    {
+      "folder": "ollama",
+      "commit": "8ec9ecdf692e417798169ff8d5972159078d3754",
+      "manifest_files": 77,
+      "mismatches": []
+    },
+    {
+      "folder": "sglang",
+      "commit": "7e5cd570284deaf938758f055616e66dc6183a4b",
+      "manifest_files": 75,
+      "mismatches": []
+    },
+    {
+      "folder": "tensorrt_llm",
+      "commit": "e805aac356a2519bff1e2c320575400d67cd949f",
+      "manifest_files": 23,
+      "mismatches": []
+    },
+    {
+      "folder": "vllm",
+      "commit": "ffcabb8c7ab3e066e1c77b55d7673e5d08cf26cc",
+      "manifest_files": 0,
+      "mismatches": []
+    },
+    {
+      "folder": "vllm_latest",
+      "commit": "ffcabb8c7ab3e066e1c77b55d7673e5d08cf26cc",
+      "manifest_files": 103,
+      "mismatches": []
+    }
+  ],
+  "baseline_source_hashes": [
+    {
+      "file": "results",
+      "checked": 17,
+      "mismatches": []
+    },
+    {
+      "file": "impact_results",
+      "checked": 17,
+      "mismatches": []
+    }
+  ],
+  "current_python_adapter_sha256": "64754b61382efd65c1ec2a1b3d30da76dcb31003f503ba99ebb14a39106ebbdf",
+  "records_matching_current_python_adapter_hash": 0
+}

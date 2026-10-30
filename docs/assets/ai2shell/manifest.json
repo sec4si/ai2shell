@@ -1,0 +1,74 @@
+{
+  "source_archive": "Ai2Shell_当文本越过工具边界.zip",
+  "source_archive_sha256": "1c5b98217b16ccf78dcb4e17d2c1a3106da0967a85e4a62a138f624af3ac4b0d",
+  "source_article": "Ai2Shell_当文本越过工具边界.md",
+  "source_article_sha256": "998b0203d4867f9e28922baa1d2e3ad7276ef53c10499c3cf8bc82aab72a79a9",
+  "description": "Author-supplied article media, copied without re-encoding. Demonstrations are separate from saved experimental observations.",
+  "files": [
+    {
+      "path": "qwen-local-demo.mp4",
+      "source_entry": "图片和附件/20261028-210900.mp4",
+      "kind": "demo_video",
+      "bytes": 632035,
+      "sha256": "b531e8a448e6e9f919fde112b8e86aaa27de724342ea58edf8be967744514295",
+      "github_attachment_url": "https://github.com/user-attachments/assets/e608f838-cffc-4add-8fce-e842540b5910"
+    },
+    {
+      "path": "pentest-agent-demo.mp4",
+      "source_entry": "图片和附件/fb4c59400c368e0234c4456749a9739e.mp4",
+      "kind": "demo_video",
+      "bytes": 5786902,
+      "sha256": "063b1a14511dccc39d7ec25cd715cec50b4a533138cd8ebb13330ff1d19d820d",
+      "github_attachment_url": "https://github.com/user-attachments/assets/987311c2-3b14-4b27-99d9-f1ec70ac7541"
+    },
+    {
+      "path": "contributors/processor.png",
+      "source_entry": "图片和附件/image 1.png",
+      "kind": "contributor_avatar",
+      "bytes": 1346099,
+      "sha256": "be36631152e6a9c24c476a155ba80116f80f7383f1643a20f3fea3694d38b60f"
+    },
+    {
+      "path": "contributors/v1ll4n.png",
+      "source_entry": "图片和附件/image.png",
+      "kind": "contributor_avatar",
+      "bytes": 93444,
+      "sha256": "a85313a42e8242c28892988890385c856eed49cc0b09fef053aeac87c40a7be8"
+    },
+    {
+      "path": "contributors/swing.png",
+      "source_entry": "图片和附件/image 2.png",
+      "kind": "contributor_avatar",
+      "bytes": 156620,
+      "sha256": "904a9a92af44c9a56c8c0723f510937a9262bc0257b7827e66359fa622524844"
+    },
+    {
+      "path": "contributors/bbznop.png",
+      "source_entry": "图片和附件/20261028-184747.png",
+      "kind": "contributor_avatar",
+      "bytes": 13436,
+      "sha256": "cea60bf6e0aff53a948210f88f238a654e75f15205ffabc47e3b10f5c4f57b4d"
+    },
+    {
+      "path": "contributors/0chencc.jpg",
+      "source_entry": "图片和附件/50c493dfc884d2da67f4495cc4cfe9a0.jpg",
+      "kind": "contributor_avatar",
+      "bytes": 116545,
+      "sha256": "f0a275620f46fb492bb30f670f52bd933e743f08b7c91def45c1475384020c79"
+    },
+    {
+      "path": "contributors/springkill.jpg",
+      "source_entry": "图片和附件/Luban_179318908362908c81c04-0d0f-4eff-b575-ae43d79d8a23.jpg",
+      "kind": "contributor_avatar",
+      "bytes": 119479,
+      "sha256": "ea75d577b796ba8b049eaccf1f0b32f48f2b76aa3369e66e837e50fc45ad522b"
+    },
+    {
+      "path": "contributors/zacharyzcr.jpg",
+      "source_entry": "图片和附件/07bcf2f670a2e8cf57f484292682af7b.jpg",
+      "kind": "contributor_avatar",
+      "bytes": 138340,
+      "sha256": "62a04270db380c385f587e168181ecc48a69102d48da4d9172d4732e7490315b"
+    }
+  ]
+}

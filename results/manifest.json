@@ -1,0 +1,511 @@
+{
+  "format_version": 1,
+  "scope": "Checksums attest file integrity, not the validity of experimental success flags.",
+  "files": {
+    "results/audits/five_ways_evidence_audit.json": {
+      "bytes": 159692,
+      "sha256": "c0d26da4e14197f07d8737b6570a3f027450b3465bee95e43b5f554200a7b6e4",
+      "kind": "derived"
+    },
+    "results/audits/report_audit.json": {
+      "bytes": 17377,
+      "sha256": "b778f56b8ebddf235d2e3ad893b51a850a79d9966b1066620ff0c051044e132b",
+      "kind": "derived"
+    },
+    "results/cross_framework/infra_results/article_variant_checks.json": {
+      "bytes": 76697,
+      "sha256": "d25c0a8f2d5405631fac4d9fb597807598292f0fc3579c43b1b3dc660097a4f3",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cell_completion.json": {
+      "bytes": 868172,
+      "sha256": "7cb9eed4895975a53b1efdb84edf7b8f1399e65e81cb66a80ac3edeb53e15a2d",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_dynamo.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_llama_cpp.stderr.log": {
+      "bytes": 192216,
+      "sha256": "409bcb8ea5b855a85ba97cd912b24f035d59528d392a299937b52f038f477aad",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_lmdeploy.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_ollama.stderr.log": {
+      "bytes": 36580,
+      "sha256": "7ed49e0936f0ece75bcc1874184b754d51fa41317316dd66d0afd7b3acc7a1e0",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_sglang.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_tensorrt_llm.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cells_vllm.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/cross_dialect.json": {
+      "bytes": 212092,
+      "sha256": "91c8c1e274e728efe1c77d00775a0c2be161234b3bfe985b6b8297664155483d",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_kimi.json": {
+      "bytes": 117046,
+      "sha256": "31336c4266141af7ee2f6ff993ccf5e98768acaae83b392ec2015e3479264a52",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_kimi_k3.json": {
+      "bytes": 139278,
+      "sha256": "0dd60c1fa0c3e99c98d6dae148e9ebdfd629331594de3a48da5fce4f470dd1d7",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_kimi_k3.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_qwen.json": {
+      "bytes": 63003,
+      "sha256": "8f6ddb5e1a2c5e3b58101616c21ba8b6a81ca22dc6529a02927a9995b61d28b9",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_qwen.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_qwen_coder.json": {
+      "bytes": 274024,
+      "sha256": "0ec8e9e8ddc39bc270b75c389635fb4f78d25a36c92c5cf5687162631fb557a3",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_v4.json": {
+      "bytes": 148306,
+      "sha256": "8b2f7a462cd2feede3759c403926181364505837dfdbe5b000b272cbb58d2ef4",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/dynamo_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_kimi.json": {
+      "bytes": 679640,
+      "sha256": "d213e375bca98d10febba127b0515c33539e7b43bc26e7968926ecd84908439a",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_kimi.stderr.log": {
+      "bytes": 17835,
+      "sha256": "b00fc34169a43c65557794ecb22b72cc7f87deaac532a54cd06572ac43b9151e",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_qwen.json": {
+      "bytes": 227462,
+      "sha256": "aa4ea0f1da206dac5ff7aa234867a2bdbe7b1ad300689b308d1d7fa2a1b77cd2",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_qwen.stderr.log": {
+      "bytes": 1955,
+      "sha256": "33519a0ecd9ff27551eaf605ad074f289e0f8b8187041c30e45d5f061766d741",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_qwen_coder.json": {
+      "bytes": 90267,
+      "sha256": "794c84357904d4f881e548e046bab9c1bb6489ec9d1fa445e7093a05f2ec5001",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_v4.json": {
+      "bytes": 700082,
+      "sha256": "78611cf67b1ad981718b7ac8456e969c4ba01b78b66443b1f20b5eb2cb73502d",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/llama_cpp_v4.stderr.log": {
+      "bytes": 9960,
+      "sha256": "b9782b4b1cfb71970efcb982a4b7e7cf0915d5c241bf37c81522ef71d3f7efc6",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_kimi.json": {
+      "bytes": 84279,
+      "sha256": "5925412696d9bc2049d49f11325878a48f84b40e942cbf59b579b22c1e483a39",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_qwen.json": {
+      "bytes": 83080,
+      "sha256": "30d3574b71fae1dc3bfb29bbc9d40165459946253e75e56c8f3b08cb35a60247",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_qwen.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_qwen_coder.json": {
+      "bytes": 94920,
+      "sha256": "178291d1f12b3646e9cf64a46fa4789a4eac98ddc348387f441cc38e290fe0e6",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_v4.json": {
+      "bytes": 98545,
+      "sha256": "29dc1af276a753b5522737ac138a46e87a7f05f87d287b130420611ad3f79b2c",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/lmdeploy_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/matrix.json": {
+      "bytes": 84514,
+      "sha256": "9acdc53833acac0277f29ef224b5fb01cc9fcb994973b7a0ebc0f04bcc97c23f",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_kimi.json": {
+      "bytes": 103684,
+      "sha256": "c8391a928f12d2bbaafa2948b5b7fecff70122640d65ecbc46093c19340dd845",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_qwen.json": {
+      "bytes": 88374,
+      "sha256": "8df2ac160870e073a65166c63e3c51ecb1e9aa65adedef466caa11252e757e72",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_qwen.stderr.log": {
+      "bytes": 2145,
+      "sha256": "e00a2070f4dc60dcf61260a55f7de615b219fb2f368ca0b56971877c6f36cb0c",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_qwen_coder.json": {
+      "bytes": 102605,
+      "sha256": "63522a550b0175ddab4f7e4a5207cddb8d22ac88fb1a75e3c45e5d3803b7afc0",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_qwen_coder.stderr.log": {
+      "bytes": 1405,
+      "sha256": "aba2246e03a49ef30d791139de1f6f13788dde32a0682d303cd78482c0fb91bd",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_v4.json": {
+      "bytes": 113105,
+      "sha256": "5df766ac701cd54856e446fd774747f3e529d688c318c2d5c4454e06115fb5d0",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/ollama_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_kimi.json": {
+      "bytes": 93871,
+      "sha256": "ea19eab121d5bd4e9689f06420d94b974615be46235b6cd1c62b0904dcea068f",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_kimi_k3.json": {
+      "bytes": 109162,
+      "sha256": "ed83f92201d24376544bd8ee3befa029c55911caeecdeadea367aab95bbdb270",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_kimi_k3.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_qwen.json": {
+      "bytes": 82571,
+      "sha256": "6ccfc147cedcfc01602c862cd5b01791d0936ab2583cab145f5e82c593d22b16",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_qwen.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_qwen_coder.json": {
+      "bytes": 94374,
+      "sha256": "19b6e1d212d455aedd7f01bf44981422e97f9b71188b3a2f29d46c7d06fc83ca",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_v4.json": {
+      "bytes": 104572,
+      "sha256": "e83e00d91c3fcfe68d4b8128f3d87e9e4badb027a20b34ea68dc04cebfbedbc2",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_v41.json": {
+      "bytes": 92868,
+      "sha256": "8701aa698531ed8ee564988d5e8b605e3a943305db9cb792e4ad9cde9f269bb5",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/sglang_v41.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_kimi.json": {
+      "bytes": 92880,
+      "sha256": "8acdb13426b798235d828c52f26e8f63a2f229a7f63361574205067209fbfa86",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_kimi_k3.json": {
+      "bytes": 112698,
+      "sha256": "12316c6ac3585fe0e1b97de69c117a53301016a8c1253821dc0a535b521f6a7a",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_kimi_k3.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_qwen.json": {
+      "bytes": 83169,
+      "sha256": "09895cf2dffcfb4fa0e293f8266feb6d498a8de84899de480d838911b36b8f14",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_qwen.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_qwen_coder.json": {
+      "bytes": 105477,
+      "sha256": "78f7e462f8e0d957e9a4be1db1a7811e6d8a5c5d9acbfd696e9452ebfc367373",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_v4.json": {
+      "bytes": 108287,
+      "sha256": "cbfc643e97ee742fb595ea7cc1cf5a841ba64d94f7515117bd8d82c1616fa38e",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_v41.json": {
+      "bytes": 96600,
+      "sha256": "2a9b911b437bfcb117956b7f187826207e3505958cc8e474859b9d9ac4bed4b9",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/tensorrt_llm_v41.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_kimi.json": {
+      "bytes": 101077,
+      "sha256": "f9e1594cdccf58d92fbdfb07fb64a4fc2243a0ace93f34ee572b41d7e512bf2d",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_kimi.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_kimi_k3.json": {
+      "bytes": 61525,
+      "sha256": "5fa151b90f91bfa1d1b455770f2bc9f1e0af7ffca2749e6a928811046e8688dc",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_kimi_k3.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_qwen.json": {
+      "bytes": 97333,
+      "sha256": "32a12c66198f6c4909769358594fceeca064c30e1894dcd56589cfab0461aba3",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_qwen.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_qwen_coder.json": {
+      "bytes": 104904,
+      "sha256": "1c8ab47894947c1b1c4adc2a6783bc0f2ff8c72b03756fa6e0dfc28c69991383",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_qwen_coder.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_v4.json": {
+      "bytes": 119397,
+      "sha256": "a5a12ac32c8d1f3ea966e6d722e6d48ccad762dc49fbd27d282e46ba18c7eae6",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_v4.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_v41.json": {
+      "bytes": 119448,
+      "sha256": "e8a1677fd81e1408585cc07e5549b90a3d8f2a21e854e357c67ee4a706af3003",
+      "kind": "saved_observation"
+    },
+    "results/cross_framework/infra_results/vllm_v41.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "saved_observation"
+    },
+    "results/deepseek_vllm/e2e_results.json": {
+      "bytes": 27555,
+      "sha256": "5c6e001972c77c0afeacd2dd721604026221cbf535628c4e41fb01234e1b41ea",
+      "kind": "saved_observation"
+    },
+    "results/deepseek_vllm/impact_results.json": {
+      "bytes": 31033,
+      "sha256": "04b566a7fa7ac4794553278ca3641f81415adc34a08d0728ec255af255965e25",
+      "kind": "saved_observation"
+    },
+    "results/deepseek_vllm/results.json": {
+      "bytes": 16255,
+      "sha256": "fc40cc6c60882397e72b6558ad399e9dc0254bf21ef825758a385f399d5ab5d2",
+      "kind": "saved_observation"
+    },
+    "results/exports/article_trigger_variants.json": {
+      "bytes": 305191,
+      "sha256": "8f63ab5e08c0ab409b42b4911356c03cb2f04741727d87a388d951b7f71bd60c",
+      "kind": "derived"
+    },
+    "results/exports/five_ways_evidence.json": {
+      "bytes": 205656,
+      "sha256": "1af9de4ca69e0f21d579ba4bea6a83479a12264d65c802ecda7bd0e56c0c2ab4",
+      "kind": "derived"
+    },
+    "results/exports/io_examples.json": {
+      "bytes": 2133759,
+      "sha256": "c4fe9f0877bdd5cf6369d719ba4def71311bb9f05b8a98f7a52c9ac948d790f5",
+      "kind": "derived"
+    },
+    "results/layout-migration.json": {
+      "bytes": 1977,
+      "sha256": "1b629dade8c02f7d9d9d0c6cf8a5dee904b042c47e6a88fb113b138515139998",
+      "kind": "metadata"
+    },
+    "results/online/deepseek-v4.1-flash-1017__bash_id/bash_id_full_loop.json": {
+      "bytes": 11274,
+      "sha256": "3fa3299dd9e1dfb18010f16a2e0dc7ad71b8918abe270ffb31e06fd1cc725220",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__bash_id/bash_ls_full_loop.json": {
+      "bytes": 7746,
+      "sha256": "87146b737a61dcdc363fbde5038ae4ff81fd3231409564ccf1dbb88cd0466bb1",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__bash_id/bash_ls_success.json": {
+      "bytes": 5461,
+      "sha256": "bbfa6b0ccf682c8bb917a209035711234f74551f1beca2934790e2e3720a699d",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__bash_id/online_results.json": {
+      "bytes": 15157,
+      "sha256": "e8fba3178efee7e2726854b5af626130ae3d6ec3c05c57813c0c8ca2859d9b09",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__dsml_v41/online_results.json": {
+      "bytes": 11101,
+      "sha256": "cf683ebe4ea0bc783970299131ca9bb56f0601f4c3e10e03a33a98caf5557b76",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__pentest_dsml_gateway/online_results.json": {
+      "bytes": 73947,
+      "sha256": "f31ffdc03c3505675b17cd595cf5ca0fe4f13b81154887e9946340efdd6f2e9a",
+      "kind": "saved_observation"
+    },
+    "results/online/deepseek-v4.1-flash-1017__pentest_dsml_gateway/pentest_site5_results.json": {
+      "bytes": 85493,
+      "sha256": "aa494156d5862f6bf38a867594a827596d30a1fe671fbc419d85855c8f2ae104",
+      "kind": "saved_observation"
+    },
+    "results/online/kimi-k3__kimi_k3/online_results.json": {
+      "bytes": 13618,
+      "sha256": "dfed49c7f504b324c874511a23488b636909ad86fcaae201db445727beae8956",
+      "kind": "saved_observation"
+    },
+    "results/online/kimi-k3__kimi_k3_anthropic/online_results.json": {
+      "bytes": 15672,
+      "sha256": "54ab10de5366c2c88d925f949624912ea957214d585aad707c570a655edc8173",
+      "kind": "saved_observation"
+    },
+    "results/redactions.json": {
+      "bytes": 2299,
+      "sha256": "def0061cd79e117126faef47ac22e923197ea29311cf7d83fb0d6396bf82cc31",
+      "kind": "metadata"
+    },
+    "results/scope.json": {
+      "bytes": 686,
+      "sha256": "be45b11cf6daddfcf9ff984cef814bb1af154b335054c4ab03e14eb79fd2a7f8",
+      "kind": "metadata"
+    }
+  }
+}

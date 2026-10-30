@@ -1,0 +1,41 @@
+# Local environments, tooling and private originals
+/.venv/
+/.infra-venv/
+/.tools/
+/.local/
+# Original article bundle; selected media are versioned under docs/assets/ai2shell/.
+/Ai2Shell_当文本越过工具边界.zip
+/archive/
+/work/
+/tmpl.txt
+/dsml_analysis
+/infra_sources
+.env
+.env.*
+!.env.example
+
+# Python caches and packaging
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+/dist/
+/build/
+
+# Native build products; upstream source fixtures remain eligible for tracking
+/probes/native/**/build/
+/probes/native/**/target/
+/probes/native/ollama/infra-ollama
+/probes/native/ollama/infra-ollama.exe
+/probes/native/dynamo/.cargo/config.toml
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Full upstream tree inventories are provenance inputs and are intentionally kept.
+# Experimental JSON and stderr logs under results/ are intentionally kept.
