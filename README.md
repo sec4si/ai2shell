@@ -6,7 +6,7 @@
 
 本仓库提供固定源码回放、跨框架实验数据、在线 API 观测、Agent 演示和研究文档，覆盖六类模型方言与七类推理框架。
 
-[研究文章](docs/article.md) · [详细报告](docs/reports/报告.md) · [逐项输入输出](docs/reports/输入输出对照.md) · [复现说明](docs/REPRODUCING.md)
+[项目主页](https://2shell.ai/) · [研究文章](docs/article.md) · [详细报告](docs/reports/报告.md) · [逐项输入输出](docs/reports/输入输出对照.md) · [复现说明](docs/REPRODUCING.md)
 
 ## 问题发生在哪里
 
